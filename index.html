@@ -1,15 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>barchives — Trackers built for the tap</title>
-<meta name="description" content="Two Notion templates with Apple Shortcuts automation. Log finance and gym workouts from your phone in one tap." />
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>barchives — Hybrid 1.3 SF</title>
+<meta content="Two Notion templates with Apple Shortcuts automation. Log finance and gym workouts from your phone in one tap." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Inter+Tight:wght@500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <script>
   (function () {
     document.documentElement.classList.add('js');
@@ -23,7 +22,6 @@
     } catch (e) {}
   })();
 </script>
-
 <style>
   :root {
     --bg: #f4f6f1;
@@ -1752,504 +1750,1734 @@
       .final .eyebrow, .final .h-display, .final .lead, .final-ctas
     ) { opacity: 1; transform: none; transition: none; }
   }
-</style>
-</head>
-<body>
 
+
+/* ===== Prototype 2.0 — cobalt editorial, deliberately softened ===== */
+:root {
+  --bg: #F6F4ED;
+  --surface: #FFFDF8;
+  --surface-soft: #F0EEE7;
+  --ink: #14140F;
+  --ink-2: #34342F;
+  --muted: #6C6B63;
+  --line: #DED9CC;
+  --line-strong: #C7C1B4;
+  --accent: #2D3FE7;
+  --accent-hover: #2333C9;
+  --accent-2: #C8D0FF;
+  --accent-3: #C4553A;
+  --accent-4: #D89362;
+  --on-accent: #FBF9F2;
+  --money: #238354;
+  --accent-soft: rgba(45, 63, 231, 0.10);
+  --rust-soft: rgba(196, 85, 58, 0.12);
+  --money-soft: rgba(35, 131, 84, 0.12);
+
+  --brand-yellow: #F4DCA1;
+  --brand-red: #C4553A;
+  --brand-blue: #5470FF;
+  --brand-green: #2EA36B;
+  --brand-glow-size: 0px;
+  --brand-glow-strength: 0%;
+  --orb-yellow: color-mix(in srgb, var(--brand-yellow) 72%, #ffffff);
+  --orb-red: color-mix(in srgb, var(--brand-red) 62%, #ffffff);
+  --orb-blue: color-mix(in srgb, var(--brand-blue) 58%, #ffffff);
+  --orb-green: color-mix(in srgb, var(--brand-green) 58%, #ffffff);
+
+  --shadow: 0 22px 58px rgba(45, 63, 231, .13);
+  --shadow-soft: 0 12px 36px rgba(45, 63, 231, .08);
+  --r-xl: 22px;
+  --r-lg: 16px;
+  --r-md: 11px;
+  --r-sm: 7px;
+  --r-pill: 999px;
+
+  --font: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Inter Tight', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+}
+
+[data-theme="dark"] {
+  --bg: #10132A;
+  --surface: #171B37;
+  --surface-soft: #20254A;
+  --ink: #F7F5EE;
+  --ink-2: #D9D9E3;
+  --muted: #A5A9C0;
+  --line: #303663;
+  --line-strong: #4A528B;
+  --accent: #7085FF;
+  --accent-hover: #93A2FF;
+  --accent-2: #B8C2FF;
+  --accent-3: #E48162;
+  --accent-4: #E9B37D;
+  --on-accent: #10132A;
+  --money: #62D39A;
+  --accent-soft: rgba(112, 133, 255, 0.17);
+  --rust-soft: rgba(228, 129, 98, 0.17);
+  --money-soft: rgba(98, 211, 154, 0.15);
+
+  --brand-yellow: #FFE1A5;
+  --brand-red: #F08B6D;
+  --brand-blue: #91A1FF;
+  --brand-green: #67D99E;
+  --brand-glow-size: 10px;
+  --brand-glow-strength: 44%;
+  --orb-yellow: var(--brand-yellow);
+  --orb-red: var(--brand-red);
+  --orb-blue: var(--brand-blue);
+  --orb-green: var(--brand-green);
+
+  --shadow: 0 25px 70px rgba(0, 0, 0, .34), 0 0 45px rgba(71, 93, 255, .08);
+  --shadow-soft: 0 16px 44px rgba(0, 0, 0, .25), 0 0 30px rgba(71, 93, 255, .05);
+}
+
+html { color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }
+body {
+  background:
+    radial-gradient(circle at 11% 6%, rgba(45, 63, 231, .13), transparent 28rem),
+    radial-gradient(circle at 92% 13%, rgba(196, 85, 58, .09), transparent 22rem),
+    var(--bg);
+}
+[data-theme="dark"] body {
+  background:
+    radial-gradient(circle at 11% 6%, rgba(112, 133, 255, .14), transparent 29rem),
+    radial-gradient(circle at 92% 13%, rgba(228, 129, 98, .075), transparent 24rem),
+    var(--bg);
+}
+
+:focus-visible { outline-color: var(--accent-3); }
+::selection { background: var(--accent); color: var(--on-accent); }
+
+.h-display, .brand, .mockup-h, .balance-value, .callout-value, .builder-quote, .stack-item .v {
+  font-family: var(--font-display);
+}
+.h-display { font-weight: 700; letter-spacing: -.055em; }
+h1.h-display { font-weight: 750; letter-spacing: -.072em; }
+.eyebrow, .product-tag, .mockup-bar, .mockup-bar .path, .notion-section-h,
+.notion-callout .callout-label, .notion-stat .ns-label, .product-price,
+.demo-side-label, .step-num, .hero-microcopy, .proof span {
+  font-family: var(--font-mono);
+}
+.eyebrow { font-size: .70rem; letter-spacing: .13em; font-weight: 600; }
+.eyebrow::before { background: var(--accent); box-shadow: 14px 0 0 var(--accent-3); }
+
+.marker::after { background: rgba(200, 208, 255, .78); }
+[data-theme="dark"] .marker::after { background: rgba(112, 133, 255, .42); }
+
+.btn { font-weight: 700; box-shadow: none; }
+.btn-primary {
+  background: var(--accent);
+  color: var(--on-accent);
+  box-shadow: 0 12px 24px rgba(45, 63, 231, .20);
+}
+.btn-primary:hover { background: var(--accent-hover); box-shadow: 0 16px 30px rgba(45, 63, 231, .27); }
+.btn-ghost { background: color-mix(in srgb, var(--surface) 88%, transparent); color: var(--ink); }
+.btn-ghost:hover { background: var(--surface-soft); }
+.btn-accent {
+  background: var(--accent-2);
+  color: #24317A;
+  box-shadow: 0 12px 26px rgba(45, 63, 231, .14);
+}
+[data-theme="dark"] .btn-accent { background: var(--accent); color: #F8F8FF; border-color: transparent; box-shadow: 0 12px 28px rgba(112, 133, 255, .22); }
+
+.nav { background: color-mix(in srgb, var(--bg) 78%, transparent); border-color: color-mix(in srgb, var(--line) 82%, transparent); }
+.brand-mark { border-radius: 10px; box-shadow: 0 10px 24px rgba(20, 20, 15, .10); }
+.brand:hover .brand-mark { box-shadow: 0 12px 30px rgba(45, 63, 231, .18); }
+[data-theme="dark"] .brand-mark {
+  box-shadow: 0 0 14px rgba(145, 161, 255, .42), 0 0 32px rgba(45, 63, 231, .23), 0 12px 26px rgba(0, 0, 0, .32);
+}
+[data-theme="dark"] .brand:hover .brand-mark {
+  box-shadow: 0 0 20px rgba(145, 161, 255, .60), 0 0 42px rgba(45, 63, 231, .32), 0 14px 30px rgba(0, 0, 0, .35);
+}
+.theme-toggle { box-shadow: var(--shadow-soft); }
+.nav-link:hover, [data-theme="dark"] .nav-link:hover { color: var(--accent); }
+
+.proof { border-radius: var(--r-lg); background: color-mix(in srgb, var(--surface) 90%, transparent); box-shadow: 0 8px 22px rgba(45, 63, 231, .045); }
+[data-theme="dark"] .proof { box-shadow: inset 0 1px 0 rgba(255,255,255,.025), 0 0 22px rgba(112, 133, 255, .045); }
+
+.demo-frame { border-radius: var(--r-xl); box-shadow: var(--shadow-soft); }
+.demo-frame::before { background: radial-gradient(circle at 50% -20%, rgba(45, 63, 231, .15), transparent 60%); }
+[data-theme="dark"] .demo-frame::before { background: radial-gradient(circle at 50% -20%, rgba(112, 133, 255, .20), transparent 60%); }
+.demo-side-label .num { background: var(--accent); color: var(--on-accent); }
+.demo-arrow { color: var(--accent); }
+.shortcut-card::before { background: radial-gradient(circle, rgba(112, 133, 255, .24), transparent 60%); }
+.shortcut-options li.tap-target::before { background: var(--accent-2); box-shadow: 0 0 14px rgba(184, 194, 255, .62); }
+.tap-pulse { background: var(--accent-2); box-shadow: 0 0 0 4px rgba(184, 194, 255, .18); }
+.shortcut-toast { background: rgba(112, 133, 255, .13); border-color: rgba(184, 194, 255, .32); color: var(--accent-2); }
+
+.notion-card, .mockup { border-radius: 20px; box-shadow: var(--shadow); }
+.notion-head, .notion-table th, .mockup-bar { background: var(--surface-soft); }
+.notion-table .row-fresh { background: var(--accent-soft); }
+.notion-table .row-fresh td:first-child::before { background: var(--accent); }
+.tag-food { background: rgba(232, 177, 102, .22); color: #86510F; }
+.tag-transport { background: rgba(91, 113, 246, .16); color: #2B3EA3; }
+.tag-bills { background: rgba(196, 85, 58, .15); color: #8C3828; }
+[data-theme="dark"] .tag-food { background: rgba(233, 179, 125, .15); color: #F0BE8E; }
+[data-theme="dark"] .tag-transport { background: rgba(145, 161, 255, .16); color: #B8C2FF; }
+[data-theme="dark"] .tag-bills { background: rgba(228, 129, 98, .16); color: #F0A087; }
+.num-money, .notion-stat .ns-val.notion-stat-pos { color: var(--money); }
+
+.benefit { border-radius: var(--r-lg); box-shadow: var(--shadow-soft); }
+.benefit-icon { background: var(--accent-soft); color: var(--accent); }
+.benefit:nth-child(2) .benefit-icon { background: var(--rust-soft); color: var(--accent-3); }
+.benefit:nth-child(3) .benefit-icon { background: var(--money-soft); color: var(--money); }
+[data-theme="dark"] .benefit:nth-child(1) .benefit-icon,
+[data-theme="dark"] .benefit:nth-child(2) .benefit-icon,
+[data-theme="dark"] .benefit:nth-child(3) .benefit-icon {
+  animation: cobaltBreath 4.8s ease-in-out infinite;
+}
+
+.flow::before {
+  background:
+    radial-gradient(circle at 8% 25%, rgba(45, 63, 231, .14), transparent 32%),
+    radial-gradient(circle at 92% 75%, rgba(196, 85, 58, .11), transparent 32%),
+    radial-gradient(circle at 50% 100%, rgba(35, 131, 84, .07), transparent 40%);
+}
+[data-theme="dark"] .flow::before {
+  background:
+    radial-gradient(circle at 8% 25%, rgba(112, 133, 255, .13), transparent 32%),
+    radial-gradient(circle at 92% 75%, rgba(228, 129, 98, .09), transparent 32%),
+    radial-gradient(circle at 50% 100%, rgba(98, 211, 154, .07), transparent 40%);
+}
+.step:nth-child(1) .step-num { background: var(--accent); color: #fff; border-color: var(--accent); }
+.step:nth-child(2) .step-num { background: var(--accent-3); color: #fffaf4; border-color: var(--accent-3); }
+.step:nth-child(3) .step-num { background: var(--accent-2); color: #263172; border-color: var(--accent-2); }
+
+.product-tag { background: var(--accent); color: #fff; }
+.product-tag .dot { background: var(--accent-2); }
+.gym .product-tag { background: var(--accent-3); color: #fffaf4; }
+.gym .product-tag .dot { background: #FFD6C8; }
+.feature-icon { background: var(--accent-soft); color: var(--accent); }
+.gym .feature-icon { background: var(--rust-soft); color: var(--accent-3); }
+[data-theme="dark"] .feature-icon { background: rgba(112, 133, 255, .15); color: var(--accent-2); }
+[data-theme="dark"] .gym .feature-icon { background: rgba(228, 129, 98, .15); color: #F0A087; }
+
+.mockup-wrap .orb.one { background: var(--orb-blue); color: var(--orb-blue); }
+.mockup-wrap .orb.two { background: var(--orb-yellow); color: var(--orb-yellow); }
+.gym .mockup-wrap .orb.one { background: var(--orb-red); color: var(--orb-red); }
+.gym .mockup-wrap .orb.two { background: var(--orb-green); color: var(--orb-green); }
+[data-theme="dark"] .mockup-wrap .orb { filter: blur(5px); box-shadow: 0 0 34px color-mix(in srgb, currentColor 42%, transparent); animation: orbGlow 6s ease-in-out infinite; }
+.mockup-dot { background: var(--accent-3); }
+.mockup-dot:nth-child(2) { background: var(--accent-4); }
+.mockup-dot:nth-child(3) { background: var(--money); }
+.balance-card { background: var(--accent); color: #fff; border-radius: 16px; }
+.balance-up { background: var(--accent-2); color: #27316E; }
+[data-theme="dark"] .balance-up { background: rgba(184, 194, 255, .17); color: var(--accent-2); }
+.goal-row:nth-child(1) .goal-bar > div { background: var(--accent); }
+.goal-row:nth-child(2) .goal-bar > div { background: var(--money); }
+.goal-row:nth-child(3) .goal-bar > div { background: var(--accent-3); }
+
+.notion-callout { background: color-mix(in srgb, var(--accent) 9%, var(--surface)); border-left-color: var(--accent); }
+[data-theme="dark"] .notion-callout { background: color-mix(in srgb, var(--accent) 16%, var(--surface)); border-left-color: var(--accent); }
+.gym-mock .notion-callout { background: color-mix(in srgb, var(--accent-3) 14%, var(--surface)); border-left-color: var(--accent-3); }
+[data-theme="dark"] .gym-mock .notion-callout { background: color-mix(in srgb, var(--accent-3) 16%, var(--surface)); border-left-color: var(--accent-3); }
+.notion-callout .callout-meta { color: #1C714B; background: color-mix(in srgb, var(--money) 17%, var(--surface)); }
+[data-theme="dark"] .notion-callout .callout-meta { color: var(--money); background: color-mix(in srgb, var(--money) 15%, var(--surface)); }
+.notion-callout .callout-meta.pr-meta { color: #8F3D2B; background: color-mix(in srgb, var(--accent-3) 18%, var(--surface)); }
+[data-theme="dark"] .notion-callout .callout-meta.pr-meta { color: #F0A087; background: color-mix(in srgb, var(--accent-3) 15%, var(--surface)); }
+.notion-goal:nth-of-type(1) .ng-bar > div { background: var(--accent); }
+.notion-goal:nth-of-type(2) .ng-bar > div { background: var(--money); }
+.notion-goal:nth-of-type(3) .ng-bar > div { background: var(--accent-3); }
+.notion-exercise .exe-set.pr-set { background: color-mix(in srgb, var(--accent-3) 18%, var(--surface)); border-color: color-mix(in srgb, var(--accent-3) 42%, var(--line)); color: #913D2B; }
+[data-theme="dark"] .notion-exercise .exe-set.pr-set { background: color-mix(in srgb, var(--accent-3) 16%, var(--surface)); border-color: color-mix(in srgb, var(--accent-3) 38%, var(--line)); color: #F0A087; }
+
+.builder-card { border-radius: var(--r-xl); background: color-mix(in srgb, var(--surface-soft) 88%, var(--accent-soft)); }
+.builder-card-accent { background: linear-gradient(90deg, var(--brand-yellow) 0%, var(--brand-yellow) 25%, var(--brand-red) 25%, var(--brand-red) 50%, var(--brand-blue) 50%, var(--brand-blue) 75%, var(--brand-green) 75%, var(--brand-green) 100%); }
+.builder-card .builder-grid > div:nth-child(1) .eyebrow::before { background: var(--brand-yellow); box-shadow: 14px 0 0 var(--brand-red); }
+.builder-card .builder-grid > div:nth-child(2) .eyebrow::before { background: var(--brand-blue); box-shadow: 14px 0 0 var(--brand-green); }
+.stack-item { border-radius: var(--r-lg); }
+
+.faq-item { border-radius: var(--r-md); }
+.faq-helper-icon { background: var(--accent); color: var(--accent-2); }
+[data-theme="dark"] .faq-helper-icon { background: var(--accent); color: #fff; box-shadow: 0 0 22px rgba(112, 133, 255, .25); }
+
+.final { background: #1F2A8A; color: #F9F8F1; }
+[data-theme="dark"] .final { background: #0B102D; }
+.final::before {
+  background:
+    radial-gradient(ellipse at 18% 0%, rgba(184, 194, 255, .32), transparent 52%),
+    radial-gradient(ellipse at 84% 100%, rgba(228, 129, 98, .18), transparent 54%);
+}
+.final .eyebrow::before { background: var(--accent-2); box-shadow: 14px 0 0 #F0A087; }
+.final .btn-accent { background: #F7F5EE; color: #263172; box-shadow: 0 12px 26px rgba(0, 0, 0, .17); }
+.final .btn-accent:hover { background: var(--accent-2); }
+[data-theme="dark"] .final .btn-accent { background: var(--accent); color: #fff; box-shadow: 0 0 28px rgba(112, 133, 255, .23); }
+.final .btn-ghost { background: rgba(255,255,255,.08); color: #F9F8F1; }
+
+@keyframes cobaltBreath {
+  0%, 100% { box-shadow: 0 0 0 rgba(112, 133, 255, 0); }
+  50% { box-shadow: 0 0 22px rgba(112, 133, 255, .20), 0 0 42px rgba(112, 133, 255, .07); }
+}
+@keyframes orbGlow {
+  0%, 100% { opacity: .31; transform: translate3d(0, var(--py, 0px), 0) scale(1); }
+  50% { opacity: .48; transform: translate3d(0, var(--py, 0px), 0) scale(1.035); }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-theme="dark"] .benefit:nth-child(1) .benefit-icon,
+  [data-theme="dark"] .benefit:nth-child(2) .benefit-icon,
+  [data-theme="dark"] .benefit:nth-child(3) .benefit-icon,
+  [data-theme="dark"] .mockup-wrap .orb { animation: none; }
+}
+
+
+/* Final dark-mode contrast correction */
+[data-theme="dark"] .gym .product-tag { background: var(--accent-3); color: #FFF8F3; }
+
+
+
+/* ===== Hybrid 1.0 palette: cobalt product confidence with garden warmth ===== */
+:root {
+  --bg: #FBF9F3;
+  --surface: #FFFDFC;
+  --surface-soft: #F1F2EA;
+  --ink: #181A18;
+  --ink-2: #303430;
+  --muted: #666B64;
+  --line: #DDE0D5;
+  --line-strong: #C2C9BA;
+  --accent: #3D5AFE;
+  --accent-hover: #2C46DA;
+  --accent-2: #DCEB72;
+  --accent-3: #D16D55;
+  --accent-4: #F2B760;
+  --on-accent: #FFFFFF;
+  --money: #249263;
+  --money-ink: #1C774E;
+  --accent-soft: rgba(61, 90, 254, .09);
+  --accent-soft-dark: rgba(120, 144, 255, .15);
+  --rust-soft: rgba(209, 109, 85, .13);
+  --rust-soft-dark: rgba(243, 155, 128, .15);
+  --marker: rgba(200, 210, 255, .88);
+  --marker-dark: rgba(120, 144, 255, .40);
+  --logo-base: #181A18;
+  --logo-base-dark: #202620;
+  --brand-yellow: #FFC83D;
+  --brand-red: #EE5A52;
+  --brand-blue: #4A7CFF;
+  --brand-green: #34C266;
+  --brand-glow-size: 8px;
+  --brand-glow-strength: 30%;
+  --ambient-one: rgba(61, 90, 254, .10);
+  --ambient-two: rgba(220, 235, 114, .17);
+  --ambient-one-dark: rgba(120, 144, 255, .085);
+  --ambient-two-dark: rgba(228, 242, 135, .055);
+  --shadow: 0 24px 62px rgba(32, 48, 40, .12);
+  --shadow-soft: 0 13px 38px rgba(32, 48, 40, .08);
+  --button-shadow: rgba(61, 90, 254, .22);
+  --button-shadow-hover: rgba(61, 90, 254, .30);
+  --button-ghost-shadow: rgba(61, 90, 254, .08);
+  --accent-button-shadow: rgba(220, 235, 114, .28);
+  --accent-button-shadow-hover: rgba(220, 235, 114, .42);
+  --accent-2-ink: #38451D;
+  --accent-2-hover: #E5F283;
+  --focus: #D16D55;
+  --proof-shadow: rgba(61, 90, 254, .042);
+  --proof-shadow-dark: rgba(120, 144, 255, .05);
+  --demo-glow: rgba(61, 90, 254, .12);
+  --demo-glow-dark: rgba(120, 144, 255, .10);
+  --shortcut-glow: rgba(220, 235, 114, .20);
+  --tap-glow: rgba(220, 235, 114, .63);
+  --tap-ring: rgba(220, 235, 114, .18);
+  --shortcut-toast-bg: rgba(220, 235, 114, .14);
+  --shortcut-toast-border: rgba(220, 235, 114, .32);
+  --food-bg: rgba(242, 183, 96, .25);
+  --food-ink: #80500D;
+  --transport-bg: rgba(61, 90, 254, .15);
+  --transport-ink: #2E43A9;
+  --bills-bg: rgba(209, 109, 85, .16);
+  --bills-ink: #893B2A;
+  --food-bg-dark: rgba(255, 208, 132, .15);
+  --food-ink-dark: #FFD084;
+  --transport-bg-dark: rgba(120, 144, 255, .16);
+  --transport-ink-dark: #C8D2FF;
+  --bills-bg-dark: rgba(243, 155, 128, .16);
+  --bills-ink-dark: #F3B09A;
+  --benefit-one-ink: #946300;
+  --benefit-two: #F39AD9;
+  --benefit-two-ink: #A33683;
+  --benefit-three-ink: #207E47;
+  --flow-one: rgba(61, 90, 254, .13);
+  --flow-two: rgba(220, 235, 114, .22);
+  --flow-three: rgba(209, 109, 85, .08);
+  --flow-one-dark: rgba(120, 144, 255, .09);
+  --flow-two-dark: rgba(228, 242, 135, .06);
+  --flow-three-dark: rgba(243, 155, 128, .06);
+  --gym-on: #FFF8F3;
+  --gym-dot: #FFE0D5;
+  --gym-icon-dark: #F3B09A;
+  --orb-one: color-mix(in srgb, var(--brand-blue) 48%, #FFFFFF);
+  --orb-two: color-mix(in srgb, var(--brand-yellow) 46%, #FFFFFF);
+  --orb-three: color-mix(in srgb, var(--brand-red) 44%, #FFFFFF);
+  --orb-four: color-mix(in srgb, var(--brand-green) 44%, #FFFFFF);
+  --balance-up-dark-bg: rgba(220, 235, 114, .16);
+  --gym-ink: #8D402F;
+  --faq-hover: #3D5AFE;
+  --faq-hover-dark: #E4F287;
+  --faq-shadow: rgba(61, 90, 254, .10);
+  --faq-shadow-dark: rgba(228, 242, 135, .13);
+  --faq-icon-on: #DCEB72;
+  --faq-icon-on-dark: #172016;
+  --faq-glow: rgba(120, 144, 255, .18);
+  --section-bg: #253870;
+  --section-bg-dark: #202720;
+  --section-on: #F8FAF4;
+  --section-muted: rgba(248, 250, 244, .64);
+  --section-text: rgba(248, 250, 244, .76);
+  --section-glow: rgba(220, 235, 114, .14);
+  --final-glow-one: rgba(120, 144, 255, .24);
+  --final-glow-two: rgba(220, 235, 114, .15);
+  --final-button: #FFFDFC;
+  --final-button-ink: #2C46DA;
+  --final-button-hover: #DCEB72;
+  --accent-glow: rgba(120, 144, 255, .28);
+}
+[data-theme="dark"] {
+  --bg: #171A18;
+  --surface: #202620;
+  --surface-soft: #293229;
+  --ink: #F6F8F1;
+  --ink-2: #DEE5DA;
+  --muted: #B1B9AE;
+  --line: #394438;
+  --line-strong: #4F5E4E;
+  --accent: #7890FF;
+  --accent-hover: #A1B0FF;
+  --accent-2: #E4F287;
+  --accent-3: #F39B80;
+  --accent-4: #FFD084;
+  --on-accent: #14161A;
+  --money: #67D89B;
+  --money-ink: #67D89B;
+  --accent-2-ink: #38451D;
+  --accent-2-hover: #ECF99D;
+  --shadow: 0 26px 72px rgba(0,0,0,.35);
+  --shadow-soft: 0 16px 46px rgba(0,0,0,.27);
+  --orb-one: var(--brand-blue);
+  --orb-two: var(--brand-yellow);
+  --orb-three: var(--brand-red);
+  --orb-four: var(--brand-green);
+  --section-bg: #253870;
+  --section-bg-dark: #202720;
+  --section-on: #F8FAF4;
+  --section-muted: rgba(248, 250, 244, .64);
+  --section-text: rgba(248, 250, 244, .76);
+  --final-button: #FFFDFC;
+  --final-button-ink: #2C46DA;
+  --final-button-hover: #E4F287;
+}
+
+
+/* ===== Shared locked system — Prototype 2.0 type, original logo, glowing benefits, FAQ interactions ===== */
+html { color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }
+
+body {
+  background:
+    radial-gradient(circle at 9% 4%, var(--ambient-one), transparent 29rem),
+    radial-gradient(circle at 92% 12%, var(--ambient-two), transparent 24rem),
+    var(--bg);
+}
+[data-theme="dark"] body {
+  background:
+    radial-gradient(circle at 10% 4%, var(--ambient-one-dark), transparent 29rem),
+    radial-gradient(circle at 92% 12%, var(--ambient-two-dark), transparent 24rem),
+    var(--bg);
+}
+
+:focus-visible { outline-color: var(--focus); }
+::selection { background: var(--accent); color: var(--on-accent); }
+
+/* The user-selected prototype type scale and spacing stay untouched. */
+.h-display, .brand, .mockup-h, .balance-value, .callout-value, .builder-quote, .stack-item .v {
+  font-family: var(--font-display);
+}
+.h-display { font-weight: 700; letter-spacing: -.055em; }
+h1.h-display { font-weight: 750; letter-spacing: -.072em; }
+.eyebrow, .product-tag, .mockup-bar, .mockup-bar .path, .notion-section-h,
+.notion-callout .callout-label, .notion-stat .ns-label, .product-price,
+.demo-side-label, .step-num, .hero-microcopy, .proof span {
+  font-family: var(--font-mono);
+}
+.eyebrow { font-size: .70rem; letter-spacing: .13em; font-weight: 600; }
+.eyebrow::before { background: var(--accent); box-shadow: 14px 0 0 var(--accent-3); }
+
+.marker::after { background: var(--marker); }
+[data-theme="dark"] .marker::after { background: var(--marker-dark); }
+
+/* Original four-colour logo palette plus the glow treatment the user chose. */
+.brand-mark {
+  background: var(--logo-base);
+  border-radius: 10px;
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, .70),
+    0 10px 24px rgba(20, 22, 20, .11);
+}
+.brand:hover .brand-mark {
+  box-shadow:
+    0 0 16px rgba(255, 255, 255, .88),
+    0 0 28px color-mix(in srgb, var(--brand-blue) 22%, transparent),
+    0 12px 30px rgba(20, 22, 20, .15);
+}
+.brand-mark i:nth-child(1) { background: var(--brand-yellow); }
+.brand-mark i:nth-child(2) { background: var(--brand-red); }
+.brand-mark i:nth-child(3) { background: var(--brand-blue); }
+.brand-mark i:nth-child(4) { background: var(--brand-green); }
+[data-theme="dark"] .brand-mark {
+  background: var(--logo-base-dark);
+  box-shadow:
+    0 0 16px color-mix(in srgb, var(--brand-yellow) 46%, transparent),
+    0 0 30px color-mix(in srgb, var(--brand-red) 18%, transparent),
+    0 0 48px color-mix(in srgb, var(--brand-blue) 16%, transparent),
+    0 12px 28px rgba(0,0,0,.34);
+}
+[data-theme="dark"] .brand:hover .brand-mark {
+  box-shadow:
+    0 0 21px color-mix(in srgb, var(--brand-yellow) 60%, transparent),
+    0 0 38px color-mix(in srgb, var(--brand-red) 28%, transparent),
+    0 0 58px color-mix(in srgb, var(--brand-blue) 24%, transparent),
+    0 14px 32px rgba(0,0,0,.38);
+}
+
+.btn { font-weight: 700; }
+.btn-primary {
+  background: var(--accent);
+  color: var(--on-accent);
+  box-shadow: 0 12px 25px var(--button-shadow);
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 16px 32px var(--button-shadow-hover);
+}
+.btn-ghost {
+  background: color-mix(in srgb, var(--surface) 89%, transparent);
+  color: var(--ink);
+}
+.btn-ghost:hover {
+  background: var(--surface-soft);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--line));
+  box-shadow: 0 9px 22px var(--button-ghost-shadow);
+}
+.btn-accent {
+  background: var(--accent-2);
+  color: var(--accent-2-ink);
+  box-shadow: 0 12px 26px var(--accent-button-shadow);
+}
+.btn-accent:hover {
+  background: var(--accent-2-hover);
+  box-shadow: 0 16px 31px var(--accent-button-shadow-hover);
+}
+[data-theme="dark"] .btn-accent {
+  background: var(--accent);
+  color: var(--on-accent);
+  border-color: transparent;
+  box-shadow: 0 0 26px var(--accent-glow), 0 12px 28px rgba(0,0,0,.16);
+}
+[data-theme="dark"] .btn-accent:hover { background: var(--accent-hover); }
+
+.nav {
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  border-color: color-mix(in srgb, var(--line) 82%, transparent);
+}
+.nav-link:hover, [data-theme="dark"] .nav-link:hover { color: var(--accent); }
+.theme-toggle { box-shadow: var(--shadow-soft); }
+
+.proof {
+  border-radius: var(--r-lg);
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+  box-shadow: 0 8px 22px var(--proof-shadow);
+}
+[data-theme="dark"] .proof {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.025), 0 0 22px var(--proof-shadow-dark);
+}
+
+.demo-frame { border-radius: var(--r-xl); box-shadow: var(--shadow-soft); }
+.demo-frame::before { background: radial-gradient(circle at 50% -20%, var(--demo-glow), transparent 60%); }
+[data-theme="dark"] .demo-frame::before { background: radial-gradient(circle at 50% -20%, var(--demo-glow-dark), transparent 60%); }
+.demo-side-label .num { background: var(--accent); color: var(--on-accent); }
+.demo-arrow { color: var(--accent); }
+.shortcut-card::before { background: radial-gradient(circle, var(--shortcut-glow), transparent 60%); }
+.shortcut-options li.tap-target::before { background: var(--accent-2); box-shadow: 0 0 14px var(--tap-glow); }
+.tap-pulse { background: var(--accent-2); box-shadow: 0 0 0 4px var(--tap-ring); }
+.shortcut-toast { background: var(--shortcut-toast-bg); border-color: var(--shortcut-toast-border); color: var(--accent-2); }
+
+.notion-card, .mockup { border-radius: 20px; box-shadow: var(--shadow); }
+.notion-head, .notion-table th, .mockup-bar { background: var(--surface-soft); }
+.notion-table .row-fresh { background: var(--accent-soft); }
+.notion-table .row-fresh td:first-child::before { background: var(--accent); }
+.tag-food { background: var(--food-bg); color: var(--food-ink); }
+.tag-transport { background: var(--transport-bg); color: var(--transport-ink); }
+.tag-bills { background: var(--bills-bg); color: var(--bills-ink); }
+[data-theme="dark"] .tag-food { background: var(--food-bg-dark); color: var(--food-ink-dark); }
+[data-theme="dark"] .tag-transport { background: var(--transport-bg-dark); color: var(--transport-ink-dark); }
+[data-theme="dark"] .tag-bills { background: var(--bills-bg-dark); color: var(--bills-ink-dark); }
+.num-money, .notion-stat .ns-val.notion-stat-pos { color: var(--money); }
+
+/* Keep the liked benefit-card glows: yellow = quick, pink/red = organised, green = visibility. */
+.benefit { border-radius: var(--r-lg); box-shadow: var(--shadow-soft); }
+.benefit-icon { transition: box-shadow .3s ease, transform .3s ease, background .3s ease; }
+.benefit:hover .benefit-icon { transform: translateY(-2px) rotate(-2deg); }
+.benefit:nth-child(1) .benefit-icon {
+  background: color-mix(in srgb, var(--brand-yellow) 22%, var(--surface));
+  color: var(--benefit-one-ink);
+  box-shadow: 0 0 15px color-mix(in srgb, var(--brand-yellow) 22%, transparent);
+}
+.benefit:nth-child(2) .benefit-icon {
+  background: color-mix(in srgb, var(--benefit-two) 18%, var(--surface));
+  color: var(--benefit-two-ink);
+  box-shadow: 0 0 15px color-mix(in srgb, var(--benefit-two) 18%, transparent);
+}
+.benefit:nth-child(3) .benefit-icon {
+  background: color-mix(in srgb, var(--brand-green) 18%, var(--surface));
+  color: var(--benefit-three-ink);
+  box-shadow: 0 0 15px color-mix(in srgb, var(--brand-green) 18%, transparent);
+}
+[data-theme="dark"] .benefit:nth-child(1) .benefit-icon {
+  background: color-mix(in srgb, var(--brand-yellow) 14%, var(--surface));
+  color: var(--brand-yellow);
+  animation: benefitYellow 2.8s ease-in-out infinite;
+}
+[data-theme="dark"] .benefit:nth-child(2) .benefit-icon {
+  background: color-mix(in srgb, var(--benefit-two) 16%, var(--surface));
+  color: var(--benefit-two);
+  animation: benefitRose 3.2s ease-out infinite;
+}
+[data-theme="dark"] .benefit:nth-child(3) .benefit-icon {
+  background: color-mix(in srgb, var(--brand-green) 14%, var(--surface));
+  color: var(--brand-green);
+  animation: benefitGreen 4.8s ease-in-out infinite;
+}
+
+.flow::before {
+  background:
+    radial-gradient(circle at 8% 25%, var(--flow-one), transparent 32%),
+    radial-gradient(circle at 92% 75%, var(--flow-two), transparent 32%),
+    radial-gradient(circle at 50% 100%, var(--flow-three), transparent 40%);
+}
+[data-theme="dark"] .flow::before {
+  background:
+    radial-gradient(circle at 8% 25%, var(--flow-one-dark), transparent 32%),
+    radial-gradient(circle at 92% 75%, var(--flow-two-dark), transparent 32%),
+    radial-gradient(circle at 50% 100%, var(--flow-three-dark), transparent 40%);
+}
+.step:nth-child(1) .step-num { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.step:nth-child(2) .step-num { background: var(--accent-3); color: var(--gym-on); border-color: var(--accent-3); }
+.step:nth-child(3) .step-num { background: var(--accent-2); color: var(--accent-2-ink); border-color: var(--accent-2); }
+
+.product-tag { background: var(--accent); color: var(--on-accent); }
+.product-tag .dot { background: var(--accent-2); }
+.gym .product-tag { background: var(--accent-3); color: var(--gym-on); }
+.gym .product-tag .dot { background: var(--gym-dot); }
+.feature-icon { background: var(--accent-soft); color: var(--accent); }
+.gym .feature-icon { background: var(--rust-soft); color: var(--accent-3); }
+[data-theme="dark"] .feature-icon { background: var(--accent-soft-dark); color: var(--accent-2); }
+[data-theme="dark"] .gym .feature-icon { background: var(--rust-soft-dark); color: var(--gym-icon-dark); }
+
+.mockup-wrap .orb.one { background: var(--orb-one); color: var(--orb-one); }
+.mockup-wrap .orb.two { background: var(--orb-two); color: var(--orb-two); }
+.gym .mockup-wrap .orb.one { background: var(--orb-three); color: var(--orb-three); }
+.gym .mockup-wrap .orb.two { background: var(--orb-four); color: var(--orb-four); }
+[data-theme="dark"] .mockup-wrap .orb {
+  filter: blur(5px);
+  box-shadow: 0 0 34px color-mix(in srgb, currentColor 40%, transparent);
+  animation: orbSoftGlow 6.4s ease-in-out infinite;
+}
+.mockup-dot { background: var(--accent-3); }
+.mockup-dot:nth-child(2) { background: var(--accent-4); }
+.mockup-dot:nth-child(3) { background: var(--money); }
+.balance-card { background: var(--accent); color: var(--on-accent); border-radius: 16px; }
+.balance-up { background: var(--accent-2); color: var(--accent-2-ink); }
+[data-theme="dark"] .balance-up { background: var(--balance-up-dark-bg); color: var(--accent-2); }
+.goal-row:nth-child(1) .goal-bar > div { background: var(--accent); }
+.goal-row:nth-child(2) .goal-bar > div { background: var(--money); }
+.goal-row:nth-child(3) .goal-bar > div { background: var(--accent-3); }
+
+.notion-callout { background: color-mix(in srgb, var(--accent) 9%, var(--surface)); border-left-color: var(--accent); }
+[data-theme="dark"] .notion-callout { background: color-mix(in srgb, var(--accent) 15%, var(--surface)); border-left-color: var(--accent); }
+.gym-mock .notion-callout { background: color-mix(in srgb, var(--accent-3) 14%, var(--surface)); border-left-color: var(--accent-3); }
+[data-theme="dark"] .gym-mock .notion-callout { background: color-mix(in srgb, var(--accent-3) 16%, var(--surface)); border-left-color: var(--accent-3); }
+.notion-callout .callout-meta { color: var(--money-ink); background: color-mix(in srgb, var(--money) 17%, var(--surface)); }
+[data-theme="dark"] .notion-callout .callout-meta { color: var(--money); background: color-mix(in srgb, var(--money) 15%, var(--surface)); }
+.notion-callout .callout-meta.pr-meta { color: var(--gym-ink); background: color-mix(in srgb, var(--accent-3) 18%, var(--surface)); }
+[data-theme="dark"] .notion-callout .callout-meta.pr-meta { color: var(--gym-icon-dark); background: color-mix(in srgb, var(--accent-3) 15%, var(--surface)); }
+.notion-goal:nth-of-type(1) .ng-bar > div { background: var(--accent); }
+.notion-goal:nth-of-type(2) .ng-bar > div { background: var(--money); }
+.notion-goal:nth-of-type(3) .ng-bar > div { background: var(--accent-3); }
+.notion-exercise .exe-set.pr-set { background: color-mix(in srgb, var(--accent-3) 18%, var(--surface)); border-color: color-mix(in srgb, var(--accent-3) 42%, var(--line)); color: var(--gym-ink); }
+[data-theme="dark"] .notion-exercise .exe-set.pr-set { background: color-mix(in srgb, var(--accent-3) 16%, var(--surface)); border-color: color-mix(in srgb, var(--accent-3) 38%, var(--line)); color: var(--gym-icon-dark); }
+
+.builder-card { border-radius: var(--r-xl); background: color-mix(in srgb, var(--surface-soft) 88%, var(--accent-soft)); }
+.builder-card-accent { background: linear-gradient(90deg, var(--brand-yellow) 0%, var(--brand-yellow) 25%, var(--brand-red) 25%, var(--brand-red) 50%, var(--brand-blue) 50%, var(--brand-blue) 75%, var(--brand-green) 75%, var(--brand-green) 100%); }
+.builder-card .builder-grid > div:nth-child(1) .eyebrow::before {
+  background: var(--brand-yellow);
+  box-shadow: 14px 0 0 var(--brand-red), 0 0 var(--brand-glow-size) color-mix(in srgb, var(--brand-yellow) var(--brand-glow-strength), transparent), 14px 0 var(--brand-glow-size) color-mix(in srgb, var(--brand-red) var(--brand-glow-strength), transparent);
+}
+.builder-card .builder-grid > div:nth-child(2) .eyebrow::before {
+  background: var(--brand-blue);
+  box-shadow: 14px 0 0 var(--brand-green), 0 0 var(--brand-glow-size) color-mix(in srgb, var(--brand-blue) var(--brand-glow-strength), transparent), 14px 0 var(--brand-glow-size) color-mix(in srgb, var(--brand-green) var(--brand-glow-strength), transparent);
+}
+.stack-item { border-radius: var(--r-lg); }
+
+/* FAQ copy, layout and accordions intentionally remain the approved version. */
+.faq-item {
+  border-radius: var(--r-md);
+  transition: background .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.faq-item:hover {
+  border-color: color-mix(in srgb, var(--faq-hover) 48%, var(--line));
+  background: color-mix(in srgb, var(--faq-hover) 5%, var(--surface));
+  box-shadow: 0 10px 26px var(--faq-shadow);
+  transform: translateY(-1px);
+}
+.faq-item summary:hover { color: var(--faq-hover); }
+.faq-item[open] summary { color: var(--faq-hover); }
+.faq-item[open] summary::after { color: var(--faq-hover); }
+.faq-helper-icon { background: var(--accent); color: var(--faq-icon-on); }
+[data-theme="dark"] .faq-helper-icon { background: var(--accent); color: var(--faq-icon-on-dark); box-shadow: 0 0 24px var(--faq-glow); }
+[data-theme="dark"] .faq-item:hover {
+  border-color: color-mix(in srgb, var(--faq-hover-dark) 56%, var(--line));
+  background: color-mix(in srgb, var(--faq-hover-dark) 7%, var(--surface));
+  box-shadow: 0 0 25px var(--faq-shadow-dark);
+}
+[data-theme="dark"] .faq-item summary:hover,
+[data-theme="dark"] .faq-item[open] summary,
+[data-theme="dark"] .faq-item[open] summary::after { color: var(--faq-hover-dark); }
+
+.problem, .final { background: var(--section-bg); color: var(--section-on); }
+[data-theme="dark"] .problem, [data-theme="dark"] .final { background: var(--section-bg-dark); }
+.problem::before {
+  background: radial-gradient(circle at 80% 20%, var(--section-glow), transparent 50%);
+}
+.final::before {
+  background:
+    radial-gradient(ellipse at 18% 0%, var(--final-glow-one), transparent 52%),
+    radial-gradient(ellipse at 84% 100%, var(--final-glow-two), transparent 54%);
+}
+.problem .eyebrow, .final .eyebrow { color: var(--section-muted); }
+.problem h2, .final h2 { color: var(--section-on); }
+.problem .lead, .final .lead { color: var(--section-text); }
+.problem .eyebrow::before, .final .eyebrow::before { background: var(--accent-2); box-shadow: 14px 0 0 var(--accent-3); }
+.final .btn-accent { background: var(--final-button); color: var(--final-button-ink); box-shadow: 0 12px 26px rgba(0,0,0,.16); }
+.final .btn-accent:hover { background: var(--final-button-hover); }
+[data-theme="dark"] .final .btn-accent { background: var(--accent); color: var(--on-accent); box-shadow: 0 0 28px var(--accent-glow); }
+.final .btn-ghost { background: rgba(255,255,255,.08); color: var(--section-on); }
+
+@keyframes benefitYellow {
+  0%, 100% { box-shadow: 0 0 15px color-mix(in srgb, var(--brand-yellow) 24%, transparent); }
+  50% { box-shadow: 0 0 25px color-mix(in srgb, var(--brand-yellow) 57%, transparent), 0 0 42px color-mix(in srgb, var(--brand-yellow) 22%, transparent); }
+}
+@keyframes benefitRose {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--benefit-two) 38%, transparent); }
+  65% { box-shadow: 0 0 0 11px color-mix(in srgb, var(--benefit-two) 0%, transparent); }
+}
+@keyframes benefitGreen {
+  0%, 100% { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--brand-green) 13%, transparent), 0 0 0 0 color-mix(in srgb, var(--brand-green) 0%, transparent); }
+  50% { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--brand-green) 34%, transparent), 0 0 19px color-mix(in srgb, var(--brand-green) 20%, transparent); }
+}
+@keyframes orbSoftGlow {
+  0%, 100% { opacity: .30; transform: translate3d(0, var(--py, 0px), 0) scale(1); }
+  50% { opacity: .46; transform: translate3d(0, var(--py, 0px), 0) scale(1.028); }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-theme="dark"] .benefit:nth-child(1) .benefit-icon,
+  [data-theme="dark"] .benefit:nth-child(2) .benefit-icon,
+  [data-theme="dark"] .benefit:nth-child(3) .benefit-icon,
+  [data-theme="dark"] .mockup-wrap .orb { animation: none; }
+  .faq-item:hover { transform: none; }
+}
+
+/* Direction label: Hybrid 1.0 — electric cobalt × garden warmth */
+</style>
+<style id="hybrid-1-1-overrides">
+:root {
+  --final-button: #6B7BE8;
+  --final-button-hover: #5C6EDB;
+  --final-button-ink: #F8FAFF;
+  --final-button-border: rgba(255,255,255,.18);
+  --final-button-glow: rgba(140, 157, 255, .20);
+  --final-button-shadow: rgba(79, 97, 207, .22);
+}
+
+body {
+  background:
+    radial-gradient(circle at 10% 5%, rgba(116, 134, 255, .12), transparent 27rem),
+    radial-gradient(circle at 93% 14%, rgba(247, 173, 203, .12), transparent 22rem),
+    radial-gradient(circle at 55% -2%, rgba(200, 210, 255, .18), transparent 17rem),
+    var(--bg);
+}
+[data-theme="dark"] body {
+  background:
+    radial-gradient(circle at 10% 5%, rgba(120, 140, 255, .12), transparent 30rem),
+    radial-gradient(circle at 93% 12%, rgba(255, 168, 197, .07), transparent 24rem),
+    radial-gradient(circle at 55% -2%, rgba(140, 158, 255, .11), transparent 19rem),
+    var(--bg);
+}
+
+.demo-frame {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--surface) 94%, white) 0%, color-mix(in srgb, var(--surface-soft) 54%, white) 100%);
+}
+.demo-frame::after {
+  content: "";
+  position: absolute;
+  right: 5%;
+  bottom: -24px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(247, 173, 203, .18), transparent 68%);
+  pointer-events: none;
+}
+[data-theme="dark"] .demo-frame {
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--surface) 96%, #20284f) 0%, color-mix(in srgb, var(--surface-soft) 88%, #171d37) 100%);
+}
+[data-theme="dark"] .demo-frame::after {
+  background: radial-gradient(circle, rgba(255, 171, 198, .11), transparent 70%);
+}
+.demo-sticker {
+  position: absolute;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 13px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--line) 88%, white);
+  background: rgba(255,255,255,.86);
+  box-shadow: 0 12px 28px rgba(67, 86, 194, .10);
+  font-family: var(--font-mono);
+  font-size: .66rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.demo-sticker.one {
+  top: 18px;
+  right: 22px;
+  color: #855675;
+  background: rgba(255, 241, 247, .92);
+  transform: rotate(6deg);
+}
+.demo-sticker.two {
+  left: calc(50% - 74px);
+  bottom: 18px;
+  color: #4254AA;
+  background: rgba(239, 243, 255, .92);
+  transform: rotate(-6deg);
+}
+[data-theme="dark"] .demo-sticker {
+  border-color: rgba(255,255,255,.08);
+  background: rgba(28, 33, 61, .82);
+  box-shadow: 0 10px 30px rgba(0,0,0,.28), 0 0 18px rgba(122, 143, 252, .10);
+}
+[data-theme="dark"] .demo-sticker.one { color: #FFC5DD; }
+[data-theme="dark"] .demo-sticker.two { color: #C8D1FF; }
+@media (max-width: 820px) {
+  .demo-sticker { display: none; }
+}
+
+.shortcut-card,
+.notion-card {
+  border-radius: 24px;
+}
+.shortcut-card {
+  transform: rotate(-1.5deg);
+  box-shadow:
+    0 28px 64px -18px rgba(36, 46, 112, 0.30),
+    0 0 0 1px rgba(255,255,255,.04) inset,
+    0 14px 30px rgba(104, 125, 232, 0.10);
+}
+.shortcut-card::after {
+  content: "✦";
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  color: #FFE39E;
+  font-size: .86rem;
+  opacity: .95;
+  z-index: 1;
+}
+.notion-card {
+  position: relative;
+  transform: rotate(1deg) translate3d(0, var(--py, 0px), 0);
+}
+.notion-card::after {
+  content: "new";
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  z-index: 2;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(228, 239, 255, .9);
+  color: #4254AA;
+  font-family: var(--font-mono);
+  font-size: .60rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 22px rgba(67, 86, 194, .10);
+}
+[data-theme="dark"] .notion-card::after {
+  background: rgba(38, 46, 86, .92);
+  color: #C5CEFF;
+  box-shadow: 0 0 16px rgba(120, 140, 255, .12);
+}
+.demo-side-label {
+  gap: 12px;
+}
+.demo-side-label .num {
+  box-shadow: 0 6px 18px rgba(79, 97, 207, .18);
+}
+.demo-arrow {
+  display: grid;
+  place-items: center;
+}
+.demo-arrow svg {
+  filter: drop-shadow(0 8px 18px rgba(79, 97, 207, .12));
+}
+
+/* Final CTA / template buttons beneath the FAQ */
+.final {
+  background: linear-gradient(180deg, #27325B 0%, #222B4D 100%);
+}
+[data-theme="dark"] .final {
+  background: linear-gradient(180deg, #151B33 0%, #11162A 100%);
+}
+.final::before {
+  background:
+    radial-gradient(ellipse at 18% 0%, rgba(120, 141, 255, .24), transparent 52%),
+    radial-gradient(ellipse at 86% 100%, rgba(247, 173, 203, .18), transparent 52%),
+    radial-gradient(ellipse at 20% 90%, rgba(115, 222, 188, .10), transparent 42%);
+}
+.final::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 52% -2%, rgba(187, 200, 255, .18), transparent 24rem),
+    radial-gradient(circle at 73% 45%, rgba(255, 206, 224, .08), transparent 18rem);
+}
+[data-theme="dark"] .final::before {
+  background:
+    radial-gradient(ellipse at 18% 0%, rgba(120, 141, 255, .18), transparent 52%),
+    radial-gradient(ellipse at 86% 100%, rgba(255, 176, 206, .10), transparent 52%),
+    radial-gradient(ellipse at 20% 90%, rgba(115, 222, 188, .07), transparent 42%);
+}
+[data-theme="dark"] .final::after {
+  background:
+    radial-gradient(circle at 52% -2%, rgba(165, 180, 255, .12), transparent 24rem),
+    radial-gradient(circle at 73% 45%, rgba(255, 206, 224, .05), transparent 18rem);
+}
+.final .container { position: relative; z-index: 1; }
+.final-ctas .btn-accent {
+  background: linear-gradient(180deg, var(--final-button) 0%, #6070DE 100%);
+  color: var(--final-button-ink);
+  border: 1px solid var(--final-button-border);
+  box-shadow:
+    0 12px 30px var(--final-button-shadow),
+    0 0 24px var(--final-button-glow);
+}
+.final-ctas .btn-accent:hover {
+  background: linear-gradient(180deg, #7587F0 0%, var(--final-button-hover) 100%);
+  box-shadow:
+    0 16px 34px rgba(79, 97, 207, .28),
+    0 0 30px rgba(159, 174, 255, .24);
+}
+[data-theme="dark"] .final-ctas .btn-accent {
+  background: linear-gradient(180deg, #7B8EFA 0%, #6C7DE8 100%);
+  color: #F9FAFF;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.28),
+    0 0 30px rgba(127, 147, 255, .22);
+}
+[data-theme="dark"] .final-ctas .btn-accent:hover {
+  background: linear-gradient(180deg, #8798FF 0%, #7385F1 100%);
+  box-shadow:
+    0 14px 32px rgba(0,0,0,.32),
+    0 0 36px rgba(143, 161, 255, .28);
+}
+.final .btn-ghost {
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+}
+
+/* Small polish for the feature boxes after copy edits */
+.feature p { max-width: 43ch; }
+.product-lead { max-width: 68ch; }
+</style><style id="sf-overrides">
+/* ===== Hybrid 1.2 polish ===== */
+.faq {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(136, 151, 255, .10), transparent 28rem),
+    radial-gradient(circle at 88% 18%, rgba(255, 198, 222, .16), transparent 24rem),
+    radial-gradient(circle at 58% 100%, rgba(188, 198, 255, .10), transparent 20rem);
+}
+.faq::before,
+.faq::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.faq::before {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 214, 230, .16), transparent 16rem),
+    radial-gradient(circle at 84% 34%, rgba(150, 166, 255, .13), transparent 18rem);
+}
+.faq::after {
+  background:
+    radial-gradient(circle at 48% 88%, rgba(255, 227, 236, .13), transparent 15rem);
+}
+[data-theme="dark"] .faq {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(126, 146, 255, .08), transparent 30rem),
+    radial-gradient(circle at 88% 18%, rgba(255, 180, 210, .08), transparent 24rem),
+    radial-gradient(circle at 58% 100%, rgba(166, 182, 255, .06), transparent 20rem);
+}
+[data-theme="dark"] .faq::before {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 214, 230, .05), transparent 18rem),
+    radial-gradient(circle at 84% 34%, rgba(150, 166, 255, .08), transparent 18rem);
+}
+[data-theme="dark"] .faq::after {
+  background:
+    radial-gradient(circle at 48% 88%, rgba(255, 227, 236, .04), transparent 15rem);
+}
+.faq .container,
+.faq .faq-grid,
+.faq .faq-grid > div,
+.faq .faq-list {
+  position: relative;
+  z-index: 1;
+}
+.faq-helper-card,
+.faq-item {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.faq-helper-card {
+  background: color-mix(in srgb, var(--surface) 88%, rgba(255,255,255,.45));
+  box-shadow: 0 14px 34px rgba(89, 103, 205, .08);
+}
+.faq-item {
+  background: color-mix(in srgb, var(--surface) 90%, rgba(255,255,255,.35));
+}
+[data-theme="dark"] .faq-helper-card,
+[data-theme="dark"] .faq-item {
+  background: color-mix(in srgb, var(--surface) 84%, rgba(20,24,45,.26));
+}
+
+/* how it works — make the cards feel more like the template mockups */
+.demo-frame {
+  background:
+    radial-gradient(circle at 88% 14%, rgba(255, 219, 233, .11), transparent 18rem),
+    linear-gradient(180deg, color-mix(in srgb, var(--surface) 96%, white) 0%, color-mix(in srgb, var(--surface-soft) 66%, white) 100%);
+}
+[data-theme="dark"] .demo-frame {
+  background:
+    radial-gradient(circle at 88% 14%, rgba(255, 196, 220, .06), transparent 18rem),
+    linear-gradient(180deg, color-mix(in srgb, var(--surface) 96%, #1b2140) 0%, color-mix(in srgb, var(--surface-soft) 84%, #171d36) 100%);
+}
+.shortcut-card {
+  position: relative;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 0 0 14px;
+  box-shadow: var(--shadow-soft);
+  max-width: 330px;
+  transform: rotate(-.8deg);
+  overflow: hidden;
+  font-family: var(--font);
+}
+.shortcut-card::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  width: 38px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent-3) 0 33%, var(--accent-4) 33% 66%, var(--money) 66% 100%);
+  box-shadow: 0 0 14px rgba(128, 146, 255, .10);
+  inset: auto auto auto auto;
+}
+.shortcut-card::after {
+  content: "shortcut";
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-family: var(--font-mono);
+  font-size: .58rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.shortcut-title {
+  padding: 18px 18px 14px;
+  margin-bottom: 0;
+  background: var(--surface-soft);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -.03em;
+}
+.shortcut-options {
+  padding: 6px 16px 0;
+}
+.shortcut-options li {
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  font-size: .95rem;
+}
+.shortcut-options li.tap-target {
+  font-weight: 700;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 7%, var(--surface));
+  margin: 8px -8px 0;
+  padding: 12px 12px 12px 16px;
+  border-radius: 12px;
+  border-top: 0;
+}
+.shortcut-options li.tap-target::before {
+  left: -4px;
+  top: 9px;
+  bottom: 9px;
+  width: 3px;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(128, 146, 255, .22);
+}
+.tap-pulse {
+  background: var(--accent-2);
+}
+.shortcut-toast {
+  margin: 12px 16px 0;
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--line));
+  color: var(--accent);
+  border-radius: 10px;
+  font-size: .67rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  text-align: left;
+}
+[data-theme="dark"] .shortcut-card {
+  background: color-mix(in srgb, var(--surface) 96%, #1b2140);
+}
+[data-theme="dark"] .shortcut-title {
+  background: color-mix(in srgb, var(--surface-soft) 88%, #20284e);
+}
+[data-theme="dark"] .shortcut-options li.tap-target {
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+  color: var(--accent-2);
+}
+[data-theme="dark"] .shortcut-toast {
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+  color: var(--accent-2);
+}
+.notion-card {
+  border-radius: 20px;
+  transform: rotate(.9deg) translate3d(0, var(--py, 0px), 0);
+}
+.notion-head {
+  font-family: var(--font-mono);
+}
+.demo-arrow svg {
+  filter: drop-shadow(0 8px 18px rgba(89, 103, 205, .12));
+}
+
+:root {
+  --font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+}
+body, p, li, td, th, input, button, .lead, .feature p, .faq-item p, .builder-byline, .product-price, .proof b, .proof span, .hero-microcopy {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+}
+</style><style id="hybrid-1-3-sf-demo-overrides">
+/* Lands in Notion demo card — closer to the template mockup language */
+.demo-site {
+  transform: rotate(.8deg) translate3d(0, var(--py, 0px), 0);
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.demo-site .mockup-bar { font-family: var(--font-mono); }
+.demo-site-body {
+  padding: 20px;
+  background:
+    radial-gradient(circle at 90% 8%, rgba(191, 201, 255, .14), transparent 8rem),
+    var(--surface);
+}
+[data-theme="dark"] .demo-site-body {
+  background:
+    radial-gradient(circle at 90% 8%, rgba(160, 175, 255, .12), transparent 8rem),
+    var(--surface);
+}
+.demo-site-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: start;
+  margin-bottom: 16px;
+}
+.demo-site-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: .62rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-weight: 600;
+}
+.demo-site-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.demo-stat {
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--surface-soft) 68%, white);
+}
+.demo-stat span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: .60rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+.demo-stat strong {
+  font-size: .96rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+.demo-site-list {
+  display: grid;
+  gap: 8px;
+}
+.demo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  font-size: .88rem;
+}
+.demo-row span { color: var(--ink-2); }
+.demo-row strong { font-weight: 700; color: var(--money); }
+.demo-row.active {
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+  border-color: color-mix(in srgb, var(--accent) 22%, var(--line));
+  box-shadow: 0 10px 24px rgba(101, 120, 228, .08);
+}
+@media (max-width: 820px) {
+  .demo-site-stats { grid-template-columns: 1fr; }
+}
+</style></head>
+<body>
 <!-- ===== NAV ===== -->
 <nav class="nav">
-  <div class="container nav-inner">
-    <a href="#top" class="brand" aria-label="barchives home">
-      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-      <span>barchives</span>
-    </a>
-    <div class="nav-right">
-      <a href="#finance" class="nav-link">Finance</a>
-      <a href="#gym" class="nav-link">Gym</a>
-      <a href="#faq" class="nav-link">FAQ</a>
-      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
-        <svg class="sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        <svg class="moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-      <a href="#buy" class="btn btn-primary nav-cta">Get the templates</a>
-    </div>
-  </div>
+<div class="container nav-inner">
+<a aria-label="barchives home" class="brand" href="#top">
+<span aria-hidden="true" class="brand-mark"><i></i><i></i><i></i><i></i></span>
+<span>barchives</span>
+</a>
+<div class="nav-right">
+<a class="nav-link" href="#finance">Finance</a>
+<a class="nav-link" href="#gym">Gym</a>
+<a class="nav-link" href="#faq">FAQ</a>
+<button aria-label="Toggle dark mode" class="theme-toggle" id="theme-toggle" title="Toggle dark mode" type="button">
+<svg aria-hidden="true" class="sun" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+<svg aria-hidden="true" class="moon" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+</button>
+<a class="btn btn-primary nav-cta" href="#buy">Get the templates</a>
+</div>
+</div>
 </nav>
-
 <!-- ===== HERO ===== -->
 <header class="hero" id="top">
-  <div class="container">
-    <span class="eyebrow hero-eyebrow">Notion system + Apple Shortcut</span>
-    <h1 class="h-display">Trackers built for the <span class="marker">tap</span>, not the type.</h1>
-    <p class="lead">Personal finance and gym workouts, logged from your phone in a single shortcut. Stored, calculated, and visualised in Notion — so the tracking actually happens.</p>
-    <div class="hero-actions">
-      <a href="#finance" class="btn btn-primary">See the templates →</a>
-      <a href="#how" class="btn btn-ghost">How it works</a>
-    </div>
-    <span class="hero-microcopy">One-time setup. No bank login. No spreadsheet chaos.</span>
-
-    <div class="proof-row" aria-label="Product highlights">
-      <div class="proof"><b>Fast to log</b><span>Made for your phone</span></div>
-      <div class="proof"><b>Easy to see</b><span>Built for clarity</span></div>
-      <div class="proof"><b>Yours to tailor</b><span>Customisable in Notion</span></div>
-    </div>
-  </div>
+<div class="container">
+<span class="eyebrow hero-eyebrow">Notion system + Apple Shortcut</span>
+<h1 class="h-display">Trackers built for the <span class="marker">tap</span>, not the type.</h1>
+<p class="lead">Personal finance and gym workouts, logged from your phone in a single shortcut. Stored, calculated, and visualised in Notion — so the tracking actually happens.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#finance">See the templates →</a>
+<a class="btn btn-ghost" href="#how">How it works</a>
+</div>
+<span class="hero-microcopy">One-time setup. No bank login. No spreadsheet chaos.</span>
+<div aria-label="Product highlights" class="proof-row">
+<div class="proof"><b>Fast to log</b><span>Made for your phone</span></div>
+<div class="proof"><b>Easy to see</b><span>Built for clarity</span></div>
+<div class="proof"><b>Yours to tailor</b><span>Customisable in Notion</span></div>
+</div>
+</div>
 </header>
-
 <!-- ===== DEMO ===== -->
 <section class="demo" id="how">
-  <div class="container">
-    <div class="demo-frame">
-      <div class="demo-side">
-        <div class="demo-side-label"><span class="num">1</span> Tap on your phone</div>
-        <div class="shortcut-card" aria-hidden="true">
-          <div class="shortcut-title">Which one?</div>
-          <ul class="shortcut-options">
-            <li>Income</li>
-            <li class="tap-target">Expense<span class="tap-pulse"></span></li>
-            <li>Transfer</li>
-            <li>Credit Card Offset</li>
-            <li>Goal Contribution</li>
-          </ul>
-          <div class="shortcut-toast">Next → Amount?</div>
-        </div>
-      </div>
+<div class="container">
+<div class="demo-frame">
+<div class="demo-side">
+<div class="demo-side-label"><span class="num">1</span> Tap on your phone</div>
+<div aria-hidden="true" class="shortcut-card">
+<div class="shortcut-title">Which one?</div>
+<ul class="shortcut-options">
+<li>Income</li>
+<li class="tap-target">Expense<span class="tap-pulse"></span></li>
+<li>Transfer</li>
+<li>Credit Card Offset</li>
+<li>Goal Contribution</li>
+</ul>
+<div class="shortcut-toast">Next → Amount?</div>
+</div>
+</div>
+<div aria-hidden="true" class="demo-arrow">
+<svg fill="none" height="40" viewbox="0 0 40 40" width="40"><path d="M5 20 L30 20 M22 12 L30 20 L22 28" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+</div>
+<div class="demo-side">
+<div class="demo-side-label"><span class="num">2</span> Lands in Notion</div>
 
-      <div class="demo-arrow" aria-hidden="true">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M5 20 L30 20 M22 12 L30 20 L22 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
+<div aria-hidden="true" class="demo-site mockup">
+<div class="mockup-bar">
+<span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span>
+<span class="path">notion.so / transactions</span>
+</div>
+<div class="mockup-body demo-site-body">
+<div class="demo-site-top">
+<div>
+<div class="mockup-kicker">Latest entry</div>
+<div class="mockup-h">Transactions · 2026</div>
+</div>
+<span class="demo-site-badge">synced</span>
+</div>
+<div class="demo-site-stats">
+<div class="demo-stat"><span>Type</span><strong>Expense</strong></div>
+<div class="demo-stat"><span>Category</span><strong>Food</strong></div>
+<div class="demo-stat"><span>Amount</span><strong>$14.50</strong></div>
+</div>
+<div class="demo-site-list">
+<div class="demo-row active"><span>Jun 25 · Food</span><strong>$14.50</strong></div>
+<div class="demo-row"><span>Jun 24 · Bills</span><strong>$89.00</strong></div>
+<div class="demo-row"><span>Jun 23 · Transport</span><strong>$2.10</strong></div>
+</div>
+</div>
+</div>
 
-      <div class="demo-side">
-        <div class="demo-side-label"><span class="num">2</span> Appears in Notion</div>
-        <div class="notion-card">
-          <div class="notion-head"><span class="notion-head-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="5" width="2.4" height="14" fill="currentColor"/><rect x="15.6" y="5" width="2.4" height="14" fill="currentColor"/><polygon points="8.4,5 8.4,9.6 15.6,19 15.6,14.4" fill="currentColor"/></svg></span> Transactions · 2026</div>
-          <table class="notion-table">
-            <thead><tr><th>Date</th><th>Category</th><th>Amount</th></tr></thead>
-            <tbody>
-              <tr><td>Jun 23</td><td><span class="tag tag-transport">Transport</span></td><td class="num-money">$2.10</td></tr>
-              <tr><td>Jun 24</td><td><span class="tag tag-bills">Bills</span></td><td class="num-money">$89.00</td></tr>
-              <tr class="row-fresh"><td>Jun 25</td><td><span class="tag tag-food">Food</span></td><td class="num-money">$14.50</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ===== BENEFITS ===== -->
 <section class="benefits">
-  <div class="container">
-    <span class="eyebrow">The system behind the calm</span>
-    <h2 class="h-display benefits-title">Less admin. More awareness.</h2>
-    <p class="lead">Built around the reality of everyday tracking — where most systems collapse the moment they ask too much. Both templates keep the details organised so you can focus on noticing what matters.</p>
-
-    <div class="benefit-grid">
-      <article class="benefit">
-        <div class="benefit-icon" aria-hidden="true">⚡</div>
-        <h3>Log in seconds</h3>
-        <p>Use the Apple Shortcut to record entries — expenses, income, sets, sessions — from your home screen, lock screen, or widget. No opening Notion required.</p>
-      </article>
-      <article class="benefit">
-        <div class="benefit-icon" aria-hidden="true">⌘</div>
-        <h3>Stay automatically organised</h3>
-        <p>Each entry connects to the right database, account, category, or session — so your workspace stays clean as you use it, not as a maintenance task.</p>
-      </article>
-      <article class="benefit">
-        <div class="benefit-icon" aria-hidden="true">◎</div>
-        <h3>See the bigger picture</h3>
-        <p>Live balances, monthly trends, training volume, savings goals — computed from your data, never typed in twice. Dashboards stay current because the system does the work.</p>
-      </article>
-    </div>
-  </div>
+<div class="container">
+<span class="eyebrow">The system behind the calm</span>
+<h2 class="h-display benefits-title">Less admin. More awareness.</h2>
+<p class="lead">Built around the reality of everyday tracking — where most systems collapse the moment they ask too much. Both templates keep the details organised so you can focus on noticing what matters.</p>
+<div class="benefit-grid">
+<article class="benefit">
+<div aria-hidden="true" class="benefit-icon">⚡</div>
+<h3>Log in seconds</h3>
+<p>Use the Apple Shortcut to record entries — expenses, income, sets, sessions — from your home screen, lock screen, or widget. No opening Notion required.</p>
+</article>
+<article class="benefit">
+<div aria-hidden="true" class="benefit-icon">⌘</div>
+<h3>Stay automatically organised</h3>
+<p>Each entry connects to the right database, account, category, or session — so your workspace stays clean as you use it, not as a maintenance task.</p>
+</article>
+<article class="benefit">
+<div aria-hidden="true" class="benefit-icon">◎</div>
+<h3>See the bigger picture</h3>
+<p>Live balances, monthly trends, training volume, savings goals — computed from your data, never typed in twice. Dashboards stay current because the system does the work.</p>
+</article>
+</div>
+</div>
 </section>
-
 <!-- ===== FLOW ===== -->
 <section class="flow">
-  <div class="container">
-    <span class="eyebrow">A simple everyday flow</span>
-    <h2 class="h-display">From the tap to a current dashboard.</h2>
-
-    <div class="process">
-      <article class="step">
-        <div class="step-num">01</div>
-        <div class="step-body">
-          <h3>Choose your entry</h3>
-          <p>Open the Shortcut, pick what you're logging, and add the details in a few taps.</p>
-        </div>
-      </article>
-      <article class="step">
-        <div class="step-num">02</div>
-        <div class="step-body">
-          <h3>Let the system sort it</h3>
-          <p>Your entry lands in Notion, connected to the right account, category, exercise, or session — automatically.</p>
-        </div>
-      </article>
-      <article class="step">
-        <div class="step-num">03</div>
-        <div class="step-body">
-          <h3>Check in with clarity</h3>
-          <p>Dashboards, balances, PRs, and budgets are ready whenever you want a clearer view of where things stand.</p>
-        </div>
-      </article>
-    </div>
-  </div>
+<div class="container">
+<span class="eyebrow">A simple everyday flow</span>
+<h2 class="h-display">From the tap to a current dashboard.</h2>
+<div class="process">
+<article class="step">
+<div class="step-num">01</div>
+<div class="step-body">
+<h3>Choose your entry</h3>
+<p>Open the Shortcut, pick what you're logging, and add the details in a few taps.</p>
+</div>
+</article>
+<article class="step">
+<div class="step-num">02</div>
+<div class="step-body">
+<h3>Let the system sort it</h3>
+<p>Your entry lands in Notion, connected to the right account, category, exercise, or session — automatically.</p>
+</div>
+</article>
+<article class="step">
+<div class="step-num">03</div>
+<div class="step-body">
+<h3>Check in with clarity</h3>
+<p>Dashboards, balances, PRs, and budgets are ready whenever you want a clearer view of where things stand.</p>
+</div>
+</article>
+</div>
+</div>
 </section>
-
 <!-- ===== FINANCE ===== -->
 <section class="product" id="finance">
-  <div class="container">
-    <div class="product-tag"><span class="dot"></span> Template 01 · Personal Finance</div>
-    <h2 class="h-display product-title">Every dollar logged in one <span class="marker">tap</span>.</h2>
-    <p class="lead product-lead">A virtual-envelope budgeting system with a goals engine, multi-account balances, and live charts — designed around a shortcut that records every expense without ever opening Notion.</p>
-
-    <div class="product-layout">
-      <div>
-        <div class="features">
-          <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2.5"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-            <div>
-              <h4>Tap-to-log expenses and income</h4>
-              <p>One iOS shortcut, four prompts, one POST request. Pick category, enter amount, select account, done. Works from the home screen, lock screen, or widget.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
-            <div>
-              <h4>Multi-account balances, multi-currency-ready</h4>
-              <p>Track current accounts, savings, credit, and cash separately. Built in SGD by default — change the currency symbol in one formula and you're done.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
-            <div>
-              <h4>Goals engine with virtual envelopes</h4>
-              <p>Assign portions of your balance to goals (emergency fund, holiday, gear) without moving money between accounts. Available Balance is computed live, never typed.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-            <div>
-              <h4>Charts that exist because they help</h4>
-              <p>Monthly spend by category, savings rate over time, account breakdown. Each chart is paired with a mirror formula so it renders in Notion's native chart views.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-cta-row">
-          <div class="product-price">From <strong>S$15</strong></div>
-          <a href="https://snoopyoopy.gumroad.com/l/barchives-mool" class="btn btn-primary">Get on Gumroad →</a>
-          <a href="https://chocolate-opinion-8d1.notion.site/Finance-Tracker-3723574492a5801798f4fc66e55ce175" target="_blank" rel="noopener" class="btn btn-ghost">Preview in Notion</a>
-        </div>
-      </div>
-
-      <div class="mockup-wrap">
-        <span class="orb one" aria-hidden="true"></span>
-        <span class="orb two" aria-hidden="true"></span>
-        <div class="mockup" aria-hidden="true">
-          <div class="mockup-bar">
-            <span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span>
-            <span class="path">notion.so / barchives / finance</span>
-          </div>
-          <div class="mockup-body notion-mock">
-            <div class="notion-page-header">
-              <span class="page-icon">💰</span>
-              <span class="page-title">Finance Tracker · 2026</span>
-            </div>
-
-            <div class="notion-callout">
-              <span class="callout-emoji">💵</span>
-              <div class="callout-content">
-                <div class="callout-label">Available balance · live</div>
-                <div class="callout-value">SGD 4,218</div>
-              </div>
-              <span class="callout-meta">↑ S$420</span>
-            </div>
-
-            <div class="notion-section-h">This month</div>
-            <div class="notion-stats-row">
-              <div class="notion-stat">
-                <span class="ns-label">Income</span>
-                <span class="ns-val">$4,200</span>
-              </div>
-              <div class="notion-stat">
-                <span class="ns-label">Spent</span>
-                <span class="ns-val">$1,847</span>
-              </div>
-              <div class="notion-stat">
-                <span class="ns-label">Balance</span>
-                <span class="ns-val notion-stat-pos">$2,353</span>
-              </div>
-            </div>
-
-            <div class="notion-section-h">Goals · 3 active</div>
-            <div class="notion-goal">
-              <span class="goal-emoji">🎯</span>
-              <span class="goal-name">Emergency fund</span>
-              <div class="ng-bar"><div style="width:84%"></div></div>
-              <span class="goal-pct">84%</span>
-            </div>
-            <div class="notion-goal">
-              <span class="goal-emoji">✈️</span>
-              <span class="goal-name">Japan trip</span>
-              <div class="ng-bar"><div style="width:55%"></div></div>
-              <span class="goal-pct">55%</span>
-            </div>
-            <div class="notion-goal">
-              <span class="goal-emoji">💻</span>
-              <span class="goal-name">New laptop</span>
-              <div class="ng-bar"><div style="width:18%"></div></div>
-              <span class="goal-pct">18%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="product-tag"><span class="dot"></span> Template 01 · Personal Finance</div>
+<h2 class="h-display product-title">Every dollar logged in one <span class="marker">tap</span>.</h2>
+<p class="lead product-lead">A finance tracker built around the way you actually log things. Use the shortcut to add income, expenses, transfers, credit card offsets, and goal contributions, then let Notion sort the rest.</p>
+<div class="product-layout">
+<div>
+<div class="features">
+<div class="feature">
+<div class="feature-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24"><rect height="20" rx="2.5" width="14" x="5" y="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg></div>
+<div>
+<h4>One shortcut for every transaction type</h4>
+<p>Log income, expenses, transfers, credit card offsets, and goal contributions from your phone. The date, account, and details are captured in a few taps.</p>
+</div>
+</div>
+<div class="feature">
+<div class="feature-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24"><rect height="14" rx="2" width="20" x="2" y="5"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg></div>
+<div>
+<h4>Accounts, balances, and monthly views update automatically</h4>
+<p>Every entry lands in your Transactions database and links to the right account and month, so balances and monthly totals stay current without manual cleanup.</p>
+</div>
+</div>
+<div class="feature">
+<div class="feature-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
+<div>
+<h4>Budgeting by category, with goals on top</h4>
+<p>Track spending by category, see how each month is shaping up, and keep savings goals in the same system so you can see what is available, what is reserved, and what you are building toward.</p>
+</div>
+</div>
+<div class="feature">
+<div class="feature-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line></svg></div>
+<div>
+<h4>Dashboards that show what matters</h4>
+<p>See current balances, income, expenses, transfers, and goal progress in one place. It is meant to help you check in quickly, not spend time maintaining a tracker.</p>
+</div>
+</div>
+</div>
+<div class="product-cta-row">
+<div class="product-price">From <strong>S$15</strong></div>
+<a class="btn btn-primary" href="https://snoopyoopy.gumroad.com/l/barchives-mool">Get on Gumroad →</a>
+<a class="btn btn-ghost" href="https://chocolate-opinion-8d1.notion.site/Finance-Tracker-3723574492a5801798f4fc66e55ce175" rel="noopener" target="_blank">Preview in Notion</a>
+</div>
+</div>
+<div class="mockup-wrap">
+<span aria-hidden="true" class="orb one"></span>
+<span aria-hidden="true" class="orb two"></span>
+<div aria-hidden="true" class="mockup">
+<div class="mockup-bar">
+<span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span>
+<span class="path">notion.so / barchives / finance</span>
+</div>
+<div class="mockup-body notion-mock">
+<div class="notion-page-header">
+<span class="page-icon">💰</span>
+<span class="page-title">Finance Tracker · 2026</span>
+</div>
+<div class="notion-callout">
+<span class="callout-emoji">💵</span>
+<div class="callout-content">
+<div class="callout-label">Available balance · live</div>
+<div class="callout-value">SGD 4,218</div>
+</div>
+<span class="callout-meta">↑ S$420</span>
+</div>
+<div class="notion-section-h">This month</div>
+<div class="notion-stats-row">
+<div class="notion-stat">
+<span class="ns-label">Income</span>
+<span class="ns-val">$4,200</span>
+</div>
+<div class="notion-stat">
+<span class="ns-label">Spent</span>
+<span class="ns-val">$1,847</span>
+</div>
+<div class="notion-stat">
+<span class="ns-label">Balance</span>
+<span class="ns-val notion-stat-pos">$2,353</span>
+</div>
+</div>
+<div class="notion-section-h">Goals · 3 active</div>
+<div class="notion-goal">
+<span class="goal-emoji">🎯</span>
+<span class="goal-name">Emergency fund</span>
+<div class="ng-bar"><div style="width:84%"></div></div>
+<span class="goal-pct">84%</span>
+</div>
+<div class="notion-goal">
+<span class="goal-emoji">✈️</span>
+<span class="goal-name">Japan trip</span>
+<div class="ng-bar"><div style="width:55%"></div></div>
+<span class="goal-pct">55%</span>
+</div>
+<div class="notion-goal">
+<span class="goal-emoji">💻</span>
+<span class="goal-name">New laptop</span>
+<div class="ng-bar"><div style="width:18%"></div></div>
+<span class="goal-pct">18%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ===== GYM ===== -->
 <section class="product gym" id="gym">
-  <div class="container">
-    <div class="product-tag"><span class="dot"></span> Template 02 · Gym Tracker</div>
-    <h2 class="h-display product-title">A workout log that respects how you actually <span class="marker">train</span>.</h2>
-    <p class="lead product-lead">Phase-based programming with set-by-set logging, RIR tracking, and a shortcut built for the rest period between sets — not the 20 minutes after the session.</p>
-
-    <div class="product-layout">
-      <div>
-        <div class="features">
-          <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="10" y1="2" x2="14" y2="2"/><line x1="12" y1="14" x2="15" y2="11"/><circle cx="12" cy="14" r="8"/></svg></div>
-            <div>
-              <h4>Log sets in rest, not after the session</h4>
-              <p>Pick session → pick exercise → enter weight, reps, RIR. Loop to the next exercise without leaving the shortcut. The data lands in Notion before your next set.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-            <div>
-              <h4>Your structure, your training</h4>
-              <p>Every phase, session, and exercise is yours to restructure. PPL, upper/lower, full body, your own thing. The Shortcut reads exercises live from Notion, so customisations flow through without rebuilding anything.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
-            <div>
-              <h4>PR detection & progressive overload</h4>
-              <p>Every logged set is compared to your previous best in that rep range. PRs flag automatically. Estimated 1RM updates without you doing math between sets.</p>
-            </div>
-          </div>
-          <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6.5 6.5 11 11"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg></div>
-            <div>
-              <h4>RIR and volume tracking that matters</h4>
-              <p>Per-set RIR, weekly tonnage per muscle group, session frequency. The metrics evidence-based lifters actually use — not vanity numbers.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="product-cta-row">
-          <div class="product-price">From <strong>S$15</strong></div>
-          <a href="https://snoopyoopy.gumroad.com/l/barchive-gym" class="btn btn-primary">Get on Gumroad →</a>
-          <a href="https://chocolate-opinion-8d1.notion.site/GYM-Template-38c3574492a58031b963fcf5b40a5847" target="_blank" rel="noopener" class="btn btn-ghost">Preview in Notion</a>
-        </div>
-      </div>
-
-      <div class="mockup-wrap">
-        <span class="orb one" aria-hidden="true"></span>
-        <span class="orb two" aria-hidden="true"></span>
-        <div class="mockup" aria-hidden="true">
-          <div class="mockup-bar">
-            <span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span>
-            <span class="path">notion.so / barchives / gym</span>
-          </div>
-          <div class="mockup-body notion-mock gym-mock">
-            <div class="notion-page-header">
-              <span class="page-icon">💪</span>
-              <span class="page-title">Gym Tracker · Phase 1</span>
-            </div>
-
-            <div class="notion-callout">
-              <span class="callout-emoji">🔥</span>
-              <div class="callout-content">
-                <div class="callout-label">Today · Pull A · 47 min</div>
-                <div class="callout-value">Wednesday session</div>
-              </div>
-              <span class="callout-meta pr-meta">★ 1 PR</span>
-            </div>
-
-            <div class="notion-section-h">Exercises</div>
-
-            <div class="notion-exercise">
-              <div class="exe-head">
-                <span class="exe-emoji">🏋️</span>
-                <span class="exe-name">Barbell row</span>
-                <span class="exe-rir">RIR 1–2</span>
-              </div>
-              <div class="exe-sets">
-                <span class="exe-set">70<small>×10</small></span>
-                <span class="exe-set">75<small>×9</small></span>
-                <span class="exe-set pr-set">80<small>×8</small> ★</span>
-                <span class="exe-set">75<small>×8</small></span>
-              </div>
-            </div>
-
-            <div class="notion-exercise">
-              <div class="exe-head">
-                <span class="exe-emoji">⬇️</span>
-                <span class="exe-name">Lat pulldown</span>
-                <span class="exe-rir">RIR 2</span>
-              </div>
-              <div class="exe-sets">
-                <span class="exe-set">55<small>×12</small></span>
-                <span class="exe-set">55<small>×11</small></span>
-                <span class="exe-set">55<small>×10</small></span>
-              </div>
-            </div>
-
-            <div class="notion-exercise">
-              <div class="exe-head">
-                <span class="exe-emoji">🪢</span>
-                <span class="exe-name">Face pull</span>
-                <span class="exe-rir">RIR 3</span>
-              </div>
-              <div class="exe-sets">
-                <span class="exe-set">20<small>×15</small></span>
-                <span class="exe-set">22.5<small>×14</small></span>
-              </div>
-            </div>
-
-            <div class="notion-stats-row">
-              <div class="notion-stat">
-                <span class="ns-label">Volume</span>
-                <span class="ns-val">4,820 kg</span>
-              </div>
-              <div class="notion-stat">
-                <span class="ns-label">Est. 1RM</span>
-                <span class="ns-val notion-stat-pos">+3 kg</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="product-tag"><span class="dot"></span> Template 02 · Gym Tracker</div>
+<h2 class="h-display product-title">A workout log that respects how you actually <span class="marker">train</span>.</h2>
+<p class="lead product-lead">A workout log built for actual training sessions: choose today's session, pick an exercise from that session, and log your sets while you rest. Everything is stored in Notion so your programme and workout history live together.</p>
+<div class="product-layout">
+<div>
+<div class="features">
+<div class="feature">
+<div class="feature-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24"><line x1="10" x2="14" y1="2" y2="2"></line><line x1="12" x2="15" y1="14" y2="11"></line><circle cx="12" cy="14" r="8"></circle></svg></div>
+<div>
+<h4>Choose a session, then log as you go</h4>
+<p>The shortcut can fill in the date, show your active sessions, and pull the exercise list for the session you chose. You log weight, reps, RIR, notes, and PRs without opening Notion.</p>
+</div>
+</div>
+<div class="feature">
+<div class="feature-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg></div>
+<div>
+<h4>Set-by-set workout history</h4>
+<p>Each entry is saved to the Workout Log with its linked session and exercise, so you can look back at what you actually did instead of trying to remember it later.</p>
+</div>
+</div>
+<div class="feature">
+<div class="feature-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg></div>
+<div>
+<h4>Edit the programme without rebuilding the shortcut</h4>
+<p>Sessions and exercises are managed in Notion. When you add or change them there, the shortcut can keep reading from the updated database instead of relying on a hard-coded list.</p>
+</div>
+</div>
+<div class="feature">
+<div class="feature-icon"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24"><path d="m6.5 6.5 11 11"></path><path d="m21 21-1-1"></path><path d="m3 3 1 1"></path><path d="m18 22 4-4"></path><path d="m2 6 4-4"></path><path d="m3 10 7-7"></path><path d="m14 21 7-7"></path></svg></div>
+<div>
+<h4>Useful progress views, not filler</h4>
+<p>Review recent sessions, compare loads and reps, keep notes on how sets felt, and spot PRs over time. The point is a clean training record you will actually keep using.</p>
+</div>
+</div>
+</div>
+<div class="product-cta-row">
+<div class="product-price">From <strong>S$15</strong></div>
+<a class="btn btn-primary" href="https://snoopyoopy.gumroad.com/l/barchive-gym">Get on Gumroad →</a>
+<a class="btn btn-ghost" href="https://chocolate-opinion-8d1.notion.site/GYM-Template-38c3574492a58031b963fcf5b40a5847" rel="noopener" target="_blank">Preview in Notion</a>
+</div>
+</div>
+<div class="mockup-wrap">
+<span aria-hidden="true" class="orb one"></span>
+<span aria-hidden="true" class="orb two"></span>
+<div aria-hidden="true" class="mockup">
+<div class="mockup-bar">
+<span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span>
+<span class="path">notion.so / barchives / gym</span>
+</div>
+<div class="mockup-body notion-mock gym-mock">
+<div class="notion-page-header">
+<span class="page-icon">💪</span>
+<span class="page-title">Gym Tracker · Phase 1</span>
+</div>
+<div class="notion-callout">
+<span class="callout-emoji">🔥</span>
+<div class="callout-content">
+<div class="callout-label">Today · Pull A · 47 min</div>
+<div class="callout-value">Wednesday session</div>
+</div>
+<span class="callout-meta pr-meta">★ 1 PR</span>
+</div>
+<div class="notion-section-h">Exercises</div>
+<div class="notion-exercise">
+<div class="exe-head">
+<span class="exe-emoji">🏋️</span>
+<span class="exe-name">Barbell row</span>
+<span class="exe-rir">RIR 1–2</span>
+</div>
+<div class="exe-sets">
+<span class="exe-set">70<small>×10</small></span>
+<span class="exe-set">75<small>×9</small></span>
+<span class="exe-set pr-set">80<small>×8</small> ★</span>
+<span class="exe-set">75<small>×8</small></span>
+</div>
+</div>
+<div class="notion-exercise">
+<div class="exe-head">
+<span class="exe-emoji">⬇️</span>
+<span class="exe-name">Lat pulldown</span>
+<span class="exe-rir">RIR 2</span>
+</div>
+<div class="exe-sets">
+<span class="exe-set">55<small>×12</small></span>
+<span class="exe-set">55<small>×11</small></span>
+<span class="exe-set">55<small>×10</small></span>
+</div>
+</div>
+<div class="notion-exercise">
+<div class="exe-head">
+<span class="exe-emoji">🪢</span>
+<span class="exe-name">Face pull</span>
+<span class="exe-rir">RIR 3</span>
+</div>
+<div class="exe-sets">
+<span class="exe-set">20<small>×15</small></span>
+<span class="exe-set">22.5<small>×14</small></span>
+</div>
+</div>
+<div class="notion-stats-row">
+<div class="notion-stat">
+<span class="ns-label">Volume</span>
+<span class="ns-val">4,820 kg</span>
+</div>
+<div class="notion-stat">
+<span class="ns-label">Est. 1RM</span>
+<span class="ns-val notion-stat-pos">+3 kg</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ===== BUILDER ===== -->
 <section class="builder">
-  <div class="container">
-    <div class="builder-card">
-      <div class="builder-card-accent" aria-hidden="true"></div>
-      <div class="builder-grid">
-        <div>
-          <span class="eyebrow">The maker</span>
-          <p class="builder-quote">I built these for myself — because every tracker I tried demanded too much friction to keep up with. They're the systems I actually run my finances and training on.</p>
-          
-        </div>
-        <div>
-          <span class="eyebrow">Built on</span>
-          <div class="builder-stack">
-            <div class="stack-item">
-              <div class="l">Database</div>
-              <div class="v">Notion</div>
-              <p>Free tier works. No paid plan required.</p>
-            </div>
-            <div class="stack-item">
-              <div class="l">Logging</div>
-              <div class="v">Apple Shortcuts</div>
-              <p>iOS 16+. Built-in app — nothing to install.</p>
-            </div>
-            <div class="stack-item">
-              <div class="l">Connection</div>
-              <div class="v">Notion API</div>
-              <p>One personal integration token. Setup in 5 min.</p>
-            </div>
-            <div class="stack-item">
-              <div class="l">Hosting</div>
-              <div class="v">Your account</div>
-              <p>Your data lives in your Notion. Always.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="builder-card">
+<div aria-hidden="true" class="builder-card-accent"></div>
+<div class="builder-grid">
+<div>
+<span class="eyebrow">The maker</span>
+<p class="builder-quote">I built these for myself — because every tracker I tried demanded too much friction to keep up with. They're the systems I actually run my finances and training on.</p>
+</div>
+<div>
+<span class="eyebrow">Built on</span>
+<div class="builder-stack">
+<div class="stack-item">
+<div class="l">Database</div>
+<div class="v">Notion</div>
+<p>Free tier works. No paid plan required.</p>
+</div>
+<div class="stack-item">
+<div class="l">Logging</div>
+<div class="v">Apple Shortcuts</div>
+<p>iOS 16+. Built-in app — nothing to install.</p>
+</div>
+<div class="stack-item">
+<div class="l">Connection</div>
+<div class="v">Notion API</div>
+<p>One personal integration token. Setup in 5 min.</p>
+</div>
+<div class="stack-item">
+<div class="l">Hosting</div>
+<div class="v">Your account</div>
+<p>Your data lives in your Notion. Always.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ===== FAQ ===== -->
 <section class="faq" id="faq">
-  <div class="container">
-    <div class="faq-grid">
-      <div>
-        <span class="eyebrow">FAQ</span>
-        <h2 class="h-display" style="margin-top:18px;">Questions worth answering.</h2>
-        <div class="faq-helper-card">
-          <div class="faq-helper-icon" aria-hidden="true">✺</div>
-          <h4>Still need help?</h4>
-          <p>If your question isn't here, send a note via Gumroad — every message gets a reply.</p>
-        </div>
-      </div>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>Do I need a paid Notion plan?</summary>
-          <p>No. Both templates work on Notion's free plan. The chart blocks used in the dashboards are available to all users.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What if I'm on Android?</summary>
-          <p>The Notion templates work anywhere Notion does. The included shortcut is iOS-only (Apple Shortcuts is an Apple-only app), but you can still log entries by adding rows directly in Notion. An Android equivalent using Tasker or HTTP Shortcuts is on the roadmap.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How long does setup actually take?</summary>
-          <p>About 5 minutes for the template + Notion API integration token. The shortcut import is one tap. The full setup guide is included as a Notion page inside the template.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Can I customise the categories, exercises, accounts?</summary>
-          <p>Yes — everything is a Notion property, so adding, renaming, and removing options works exactly as it does in any database. The shortcut reads category and exercise lists from your Notion data, so changes flow through automatically.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Is my financial or training data shared anywhere?</summary>
-          <p>No. The shortcut communicates directly with your own Notion workspace via your personal API token. No servers, no analytics, no third parties involved.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Updates and support?</summary>
-          <p>One-time purchase, lifetime updates. Updates are pushed by re-duplicating the template; your existing data is preserved. Reach out by email for setup help.</p>
-        </details>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="faq-grid">
+<div>
+<span class="eyebrow">FAQ</span>
+<h2 class="h-display" style="margin-top:18px;">Questions worth answering.</h2>
+<div class="faq-helper-card">
+<div aria-hidden="true" class="faq-helper-icon">✺</div>
+<h4>Still need help?</h4>
+<p>If your question isn't here, send a note via Gumroad — every message gets a reply.</p>
+</div>
+</div>
+<div class="faq-list">
+<details class="faq-item">
+<summary>Do I need a paid Notion plan?</summary>
+<p>No. Both templates work on Notion's free plan. The chart blocks used in the dashboards are available to all users.</p>
+</details>
+<details class="faq-item">
+<summary>What if I'm on Android?</summary>
+<p>The Notion templates work anywhere Notion does. The included shortcut is iOS-only (Apple Shortcuts is an Apple-only app), but you can still log entries by adding rows directly in Notion. An Android equivalent using Tasker or HTTP Shortcuts is on the roadmap.</p>
+</details>
+<details class="faq-item">
+<summary>How long does setup actually take?</summary>
+<p>About 5 minutes for the template + Notion API integration token. The shortcut import is one tap. The full setup guide is included as a Notion page inside the template.</p>
+</details>
+<details class="faq-item">
+<summary>Can I customise the categories, exercises, accounts?</summary>
+<p>Yes — everything is a Notion property, so adding, renaming, and removing options works exactly as it does in any database. The shortcut reads category and exercise lists from your Notion data, so changes flow through automatically.</p>
+</details>
+<details class="faq-item">
+<summary>Is my financial or training data shared anywhere?</summary>
+<p>No. The shortcut communicates directly with your own Notion workspace via your personal API token. No servers, no analytics, no third parties involved.</p>
+</details>
+<details class="faq-item">
+<summary>Updates and support?</summary>
+<p>One-time purchase, lifetime updates. Updates are pushed by re-duplicating the template; your existing data is preserved. Reach out by email for setup help.</p>
+</details>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ===== FINAL CTA ===== -->
 <section class="final" id="buy">
-  <div class="container">
-    <span class="eyebrow">Get the templates</span>
-    <h2 class="h-display">The tracker you'll still be using in six months.</h2>
-    <p class="lead">Two templates. Lifetime usage. Available on Gumroad.</p>
-    <div class="final-ctas">
-      <a href="https://snoopyoopy.gumroad.com/l/barchives-mool" class="btn btn-accent">Finance Tracker →</a>
-      <a href="https://snoopyoopy.gumroad.com/l/barchive-gym" class="btn btn-accent">Gym Tracker →</a>
-      <a href="https://snoopyoopy.gumroad.com" class="btn btn-ghost">All templates</a>
-    </div>
-  </div>
+<div class="container">
+<span class="eyebrow">Get the templates</span>
+<h2 class="h-display">The tracker you'll still be using in six months.</h2>
+<p class="lead">Two templates. Lifetime usage. Available on Gumroad.</p>
+<div class="final-ctas">
+<a class="btn btn-accent" href="https://snoopyoopy.gumroad.com/l/barchives-mool">Finance Tracker →</a>
+<a class="btn btn-accent" href="https://snoopyoopy.gumroad.com/l/barchive-gym">Gym Tracker →</a>
+<a class="btn btn-ghost" href="https://snoopyoopy.gumroad.com">All templates</a>
+</div>
+</div>
 </section>
-
 <!-- ===== FOOTER ===== -->
 <footer>
-  <div class="container foot-inner">
-    <a href="#top" class="brand">
-      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-      <span>barchives</span>
-    </a>
-    <div class="foot-links">
-      <a href="#finance">Finance</a>
-      <a href="#gym">Gym</a>
-      <a href="#faq">FAQ</a>
-    </div>
-    <div>© 2026 · Built in Singapore</div>
-  </div>
+<div class="container foot-inner">
+<a class="brand" href="#top">
+<span aria-hidden="true" class="brand-mark"><i></i><i></i><i></i><i></i></span>
+<span>barchives</span>
+</a>
+<div class="foot-links">
+<a href="#finance">Finance</a>
+<a href="#gym">Gym</a>
+<a href="#faq">FAQ</a>
+</div>
+<div>© 2026 · Built in Singapore</div>
+</div>
 </footer>
-
 <script>
   (function () {
     var toggle = document.getElementById('theme-toggle');
@@ -2262,7 +3490,6 @@
     });
   })();
 </script>
-
 <script>
   /* ===== Scroll reveal + smoothed parallax ("lag" on scroll) ===== */
   (function () {
