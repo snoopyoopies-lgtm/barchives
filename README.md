@@ -1,24 +1,14 @@
-# barchives — GitHub Pages edition
+# barchives 
 
-This package contains the homepage and three separate product pages. No build tool or installation is required.
+Hi anyone who is viewing this. I am a graduate who is trying to find his footing in this current climate. barchives is just a pet name for my project to showcase my hobbies that prove to be useful in daily life. I got inspiration from creators like Easlo and others who create templates for people. Especially since finance literacy is pivotal in this country, I thought of creating something that helps me gain more control over my finances by developing a habit over tracking with minimal intrusion to your routine. I have a passion for creating anything in general be it pet projects or trinkets. The fondness of inventing and problem solving is something I find great passion in, it keeps me interested and fulfilled. So please feel free to view this particular pet project of mine at **https://barchives.pages.dev/** (which hopefully reflects said interests) and contact me with my email, **snoopyoopies@gmail.com**
 
-1. Unzip this package.
-2. Upload its contents into the root of your barchives GitHub repository. Upload the files and folders, not the ZIP file itself.
-3. Keep index.html, finance/, journal/, clipboard/, assets/, style.css, site.js, site-config.js, and favicon.svg together in the structure supplied.
-4. Use the branch and folder already configured for your GitHub Pages site.
-
-See DEPLOYMENT.md for the exact GitHub Pages and Cloudflare Pages settings. You upload the separate files in this ZIP, not the large single-file barchives.html edition.
-
-Your existing URL is https://snoopyoopies-lgtm.github.io/barchives/ . The product pages use /finance/, /journal/, and /clipboard/ beneath that path.
+## Finance Tracker purchase link
+Both Tracker purchase buttons link to https://payhip.com/b/qYwVc. The same URL is set in site-config.js. The iCloud and Notion installation links are included in your purchased material.
 
 ## Clipboard purchase link
 
-Both Clipboard purchase buttons link to https://payhip.com/b/0P9Im. The same URL is set in site-config.js. Keep the paid iCloud installation link in your purchased materials, rather than in the public website.
-
-## Single-file alternative
-
-The separately provided barchives.html contains all four views, artwork, styling, and scripts in one file. Rename it to index.html and upload that file on its own. Product views then use ?page=finance, ?page=journal, and ?page=clipboard. The webfonts load from Google Fonts; system fonts are used if the fonts cannot load.
+Both Clipboard purchase buttons link to https://payhip.com/b/0P9Im. The same URL is set in site-config.js. The iCloud installation link is included in your purchased material.
 
 ## Contact button
 
-Ask me a question is a mailto link. It opens the visitor's configured email application addressed to snoopyoopies@gmail.com. It does not send an email automatically.
+Ask me a question is a mailto link. It opens your configured email application addressed to snoopyoopies@gmail.com. It does not send an email automatically.
