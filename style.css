@@ -150,7 +150,7 @@ p { text-wrap: pretty; }
 .product-row:hover::after,.product-row:focus-visible::after { transform: scaleX(1); }
 .product-row:last-child { border-bottom: 1px solid var(--line); }
 .product-index { display: flex; align-items: center; gap: 10px; font-size: 0.7125rem; color: var(--muted); margin-bottom: 23px; }
-.product-index span:first-child { color: var(--blue); }
+.product-index span:first-child { color: var(--muted); }
 .product-title-line { display: flex; flex-wrap: wrap; gap: 15px; align-items: center; margin-bottom: 15px; }
 .product-title-line h3 { font-size: clamp(1.8rem,3vw,2.65rem); }
 .price-tag { font: 0.7425rem var(--mono); padding: 5px 9px; border: 1px solid var(--line-strong); white-space: nowrap; }
