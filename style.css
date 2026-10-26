@@ -429,3 +429,9 @@ p { text-wrap: pretty; }
   .stage-finance .mascot-cat,.stage-journal .mascot-dog,.stage-clipboard .mascot-cat { left: 16px; }
   .stage-finance .mascot-dog,.stage-journal .mascot-cat,.stage-clipboard .mascot-dog { right: 16px; }
 }
+.hero-art img[data-seasonal-hero] {
+  aspect-ratio: 1000 / 508;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
