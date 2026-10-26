@@ -179,3 +179,49 @@
   dialog?.addEventListener('close', () => { document.body.classList.remove('dialog-open'); opener?.focus(); });
   document.querySelectorAll('[data-year]').forEach(el => el.textContent = String(new Date().getFullYear()));
 })();
+// Seasonal homepage illustration — dates follow Singapore time.
+(() => {
+  const hero = document.querySelector('[data-seasonal-hero]');
+  if (!hero) return;
+
+  const originalSrc = hero.getAttribute('src');
+  const originalAlt = hero.alt;
+
+  const parts = new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Asia/Singapore',
+    month: '2-digit',
+    day: '2-digit'
+  }).formatToParts(new Date());
+
+  const month = Number(parts.find(part => part.type === 'month').value);
+  const day = Number(parts.find(part => part.type === 'day').value);
+
+  let seasonalImage;
+
+  // Halloween: 20–31 October, inclusive.
+  if (month === 10 && day >= 20) {
+    seasonalImage = {
+      src: './assets/cat-dog-halloween.png',
+      alt: 'The cat dressed as a ghost and the dog in a vampire costume holding a pumpkin basket.'
+    };
+  }
+
+  // Christmas: 1–31 December, inclusive.
+  if (month === 12) {
+    seasonalImage = {
+      src: './assets/cat-dog-christmas.png',
+      alt: 'The cat and dog wearing winter outfits and sledding down a snowy slope.'
+    };
+  }
+
+  if (!seasonalImage) return;
+
+  // Restore the original if a seasonal picture cannot load.
+  hero.addEventListener('error', () => {
+    hero.src = originalSrc;
+    hero.alt = originalAlt;
+  }, { once: true });
+
+  hero.alt = seasonalImage.alt;
+  hero.src = seasonalImage.src;
+})();
